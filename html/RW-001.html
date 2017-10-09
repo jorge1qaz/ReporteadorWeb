@@ -7,10 +7,11 @@
     <link href="../style/materialize/materialize.css" rel="stylesheet"/>
     <script src="../js/jquery-3.2.1.min.js" text="javascript"></script>
     <script src="../js/materialize/bin/materialize.min.js" text="javascript"></script>
+    <script src="../js/owner/login.js" text="javascript"></script>
     <title>Reportes</title>
   </head>
   <body>
-    <div class="green lighten-5">
+    <div class="grey lighten-5">
       <div class="container">
         <div class="row"><br/><br/><br/>
           <div class="col offset-m2 offset-s1 offset-l3 m8 s10 l6">
@@ -24,15 +25,21 @@
               <h5 class="center">Acceda a su cuenta de Contasis</h5>
               <div class="row">
                 <form>
-                  <div class="row">
+                  <div class="row" id="blockCorreo">
                     <div class="input-field col offset-m1 offset-s1 m10 s10">
-                      <input class="validate" id="last_name" type="text"/>
-                      <label for="last_name">Correo electrónico</label>
+                      <input class="validate" id="txtCorreo" type="text"/>
+                      <label for="txtCorreo">Correo electrónico</label>
+                    </div>
+                  </div>
+                  <div class="row" id="blockContrasenia">
+                    <div class="input-field col offset-m1 offset-s1 m10 s10" id="txtCorreo">
+                      <input class="validate" id="txtContrasenia" type="password"/>
+                      <label for="txtContrasenia">Contraseña</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="center">
-                      <button class="btn indigo darken-4">Aceptar</button>
+                      <button class="btn indigo darken-4" id="btnAcceder" type="button">Siguiente</button>
                     </div>
                   </div>
                 </form>
