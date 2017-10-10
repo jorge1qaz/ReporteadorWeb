@@ -5,7 +5,6 @@
             br
             br
             .col.offset-m2.offset-s1.offset-l3.m8.s10.l6
-                prueba
                 .card-panel.z-depth-4
                     .center
                         .row
@@ -23,10 +22,10 @@
                                     input#txtContrasenia.validate(type='password')
                                     label(for='txtContrasenia') Contraseña
                                     .blue-text.center
-                                        a(href="javascript:void(0)") ¿Olvidaste tu contraseña?
+                                        a#linkCambiarContrasenia(href="javascript:void(0)") ¿Olvidaste tu contraseña?
                             .row
                                 .center
-                                    button.btn.indigo.darken-4#btnAcceder(type="button") Siguiente
+                                    a.btn.indigo.waves-effect.waves-light.darken-4#btnAcceder(href="javascript:void(0)") Siguiente
         br
         br
         br

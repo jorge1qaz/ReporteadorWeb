@@ -1,0 +1,33 @@
+header
+    nav.nav-extended.white.z-depth-3.grey.lighten-4
+        .nav-wrapper
+            img#imgLogo.brand-logo.responsive-img(src='../images/logo.png', alt='imagen de logo', style='margin: 30px;')
+            a.button-collapse(href='#', data-activates='mobile-demo')
+                i.material-icons.large.black-text menu
+            ul#nav-mobile.right.hide-on-med-and-down(style='margin-right: 30px;')
+                li
+                    a.waves-effect.waves-green.black-text(href='javascript: void(0)') Principal
+                li
+                    a.waves-effect.waves-green.black-text(href='javascript: void(0)') Mantenimiento de usuarios
+                li
+                    a.waves-effect.waves-green.black-text(href='javascript: void(0)') Inteligencia financiera
+            ul#mobile-demo.side-nav
+                li
+                    a.waves-effect.waves-green.black-text(href='javascript: void(0)') Principal
+                li
+                    a.waves-effect.waves-green.black-text(href='javascript: void(0)') Mantenimiento de usuarios
+                li
+                    a.waves-effect.waves-green.black-text(href='javascript: void(0)') Inteligencia financiera
+        .nav-content
+            .row
+                ul.tabs.tabs-transparent.black-text
+                    .col.offset-m7.m3#lblNombreUsuario
+                        li.tab.right
+                            label.black-text Franco Rojas
+                    .col.m1    
+                        li.tab.right
+                            .row
+                                .col.m8.s4
+                                    img.responsive-img.circle.right(src="../images/user.jpg", alt="imagen de usuario")
+                                .col.m4.right
+                                    i.material-icons.tooltipped#btnCerrarSesion(style="margin-top: -6px;" data-position="bottom" data-delay="50" data-tooltip="Cerrar sesión") input 

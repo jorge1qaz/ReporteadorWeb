@@ -1,0 +1,23 @@
+.container
+    h3 Estado de ganancias y pérdidas
+    .row
+        .col.m3.s12
+            .card-panel.z-depth-4
+                label Opciones
+                .card-body
+                    select.browser-default
+                        option(value='', disabled='', selected='') Selecione la moneda
+                        option(value='1') Dólares
+                        option(value='2') Nuevos soles
+                    br
+                    button.btn.indigo.waves-effect.waves-light.darken-4(style="width: 100%;") Mensual 
+                    br
+                    br
+                    button.btn.indigo.waves-effect.waves-light.darken-4(style="width: 100%;") Acumulado
+        .col.m9.s12
+            .card-panel.z-depth-2
+                h5 Ejercicio 2017 (Dólares)
+                .card-body
+                    script(type='text/javascript', src='https://www.gstatic.com/charts/loader.js')
+                    #chart_div
+                    script(src="../js/owner/RW-003.js" text='javascript')

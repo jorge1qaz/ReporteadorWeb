@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link href="../style/materialize/materialize.css" rel="stylesheet"/>
+    <link href="../style/owner.css" rel="stylesheet"/>
+    <script src="../js/jquery-3.2.1.min.js" text="javascript"></script>
+    <script src="../js/materialize/bin/materialize.min.js" text="javascript"></script>
+    <script src="../js/owner/login.js" text="javascript"></script>
+    <title>Reportes</title>
+  </head>
+  <header>
+    <nav class="nav-extended white z-depth-3 grey lighten-4">
+      <div class="nav-wrapper"><img class="brand-logo responsive-img" id="imgLogo" src="../images/logo.png" alt="imagen de logo" style="margin: 30px;"/><a class="button-collapse" href="#" data-activates="mobile-demo"><i class="material-icons large black-text">menu</i></a>
+        <ul class="right hide-on-med-and-down" id="nav-mobile" style="margin-right: 30px;">
+          <li><a class="waves-effect waves-green black-text" href="javascript: void(0)">Principal</a></li>
+          <li><a class="waves-effect waves-green black-text" href="javascript: void(0)">Mantenimiento de usuarios</a></li>
+          <li><a class="waves-effect waves-green black-text" href="javascript: void(0)">Inteligencia financiera</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a class="waves-effect waves-green black-text" href="javascript: void(0)">Principal</a></li>
+          <li><a class="waves-effect waves-green black-text" href="javascript: void(0)">Mantenimiento de usuarios</a></li>
+          <li><a class="waves-effect waves-green black-text" href="javascript: void(0)">Inteligencia financiera</a></li>
+        </ul>
+      </div>
+      <div class="nav-content">
+        <div class="row">
+          <ul class="tabs tabs-transparent black-text">
+            <div class="col offset-m7 m3" id="lblNombreUsuario">
+              <li class="tab right">
+                <label class="black-text">Franco Rojas</label>
+              </li>
+            </div>
+            <div class="col m1">   
+              <li class="tab right">
+                <div class="row">
+                  <div class="col m8 s4"><img class="responsive-img circle right" src="../images/user.jpg" alt="imagen de usuario"/></div>
+                  <div class="col m4 right"><i class="material-icons tooltipped" id="btnCerrarSesion" style="margin-top: -6px;" data-position="bottom" data-delay="50" data-tooltip="Cerrar sesión">input </i></div>
+                </div>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <body>
+    <ul class="dropdown-content" id="NavBlock1">
+      <li><a href="javascript: void(0)">Cuentas pendientes</a></li>
+      <li><a href="javascript: void(0)">Reporte de vencimiento</a></li>
+      <li><a href="javascript: void(0)">Reporte de cuentas por vencer</a></li>
+      <li><a href="javascript: void(0)">Flujo de caja comprometido proyectado</a></li>
+    </ul>
+    <ul class="dropdown-content" id="NavBlock2">
+      <li><a href="javascript: void(0)">Balance general</a></li>
+      <li><a href="../html/RW-003.html">Estado de ganancias y pérdidas</a></li>
+      <li><a href="javascript: void(0)">Flujo de efectivo</a></li>
+    </ul>
+    <ul class="dropdown-content" id="NavBlock3">
+      <li><a href="javascript: void(0)">Resultado operacional</a></li>
+    </ul>
+    <ul class="dropdown-content" id="NavBlock4">
+      <li><a href="javascript: void(0)">Ejecución presupuestal</a></li>
+    </ul>
+    <ul class="dropdown-content" id="NavBlock5">
+      <li><a href="javascript: void(0)">Indicadores de rentabilidad</a></li>
+      <li><a href="javascript: void(0)">Indicadores de solvencia</a></li>
+      <li><a href="javascript: void(0)">Indicadores de eficiencia</a></li>
+      <li><a href="javascript: void(0)">Indicadores de liquidez</a></li>
+    </ul>
+    <nav class="light-blue darken-4" style="margin-top: -17px;">
+      <div class="nav-wrapper left">
+        <ul class="right hide-on-med-and-down">
+          <li><a class="dropdown-button" href="javascript: void(0)" data-activates="NavBlock1">Gestión de tesorería y cartera</a></li>
+          <li><a class="dropdown-button" href="javascript: void(0)" data-activates="NavBlock2">Estados financieros</a></li>
+          <li><a class="dropdown-button" href="javascript: void(0)" data-activates="NavBlock3">Centro de costos</a></li>
+          <li><a class="dropdown-button" href="javascript: void(0)" data-activates="NavBlock4">Presupuestos</a></li>
+          <li><a class="dropdown-button" href="javascript: void(0)" data-activates="NavBlock5">Financial Board</a></li>
+          <li><a class="dropdown-button" href="javascript: void(0)">Mi negocio al día</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h3>Estado de ganancias y pérdidas</h3>
+      <div class="row">
+        <div class="col m3 s12">
+          <div class="card-panel z-depth-4">
+            <label>Opciones</label>
+            <div class="card-body">
+              <select class="browser-default">
+                <option value="" disabled="" selected="">Selecione la moneda</option>
+                <option value="1">Dólares</option>
+                <option value="2">Nuevos soles</option>
+              </select><br/>
+              <button class="btn indigo waves-effect waves-light darken-4" style="width: 100%;">Mensual </button><br/><br/>
+              <button class="btn indigo waves-effect waves-light darken-4" style="width: 100%;">Acumulado</button>
+            </div>
+          </div>
+        </div>
+        <div class="col m9 s12">
+          <div class="card-panel z-depth-2">
+            <h5>Ejercicio 2017 (Dólares)</h5>
+            <div class="card-body">
+              <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+              <div id="chart_div"></div>
+              <script src="../js/owner/RW-003.js" text="javascript"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
