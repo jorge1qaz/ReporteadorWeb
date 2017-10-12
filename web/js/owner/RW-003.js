@@ -1,8 +1,8 @@
-google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.load('current', { packages: ['corechart', 'bar'] });
 google.charts.setOnLoadCallback(drawStacked);
 
 function drawStacked() {
-      var data = google.visualization.arrayToDataTable([
+    var data = google.visualization.arrayToDataTable([
         ['Mes', 'Acumulado'],
         ['Enero,', 817500],
         ['Febrero,', 379200],
@@ -16,20 +16,20 @@ function drawStacked() {
         ['Octubre,', 485000],
         ['Noviembre,', 1526000],
         ['Diciembre,', 817500]
-      ]);
+    ]);
 
-      var options = {
+    var options = {
         title: 'Resultado anual de la empresa XXXXXXXX',
-        chartArea: {width: '50%'},
+        chartArea: { width: '50%' },
         isStacked: true,
         hAxis: {
-          title: 'Total en dólares',
-          minValue: 0,
+            title: 'Total',
+            minValue: 0,
         },
         vAxis: {
-          title: 'Meses'
+            title: 'Meses'
         }
-      };
-      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-      chart.draw(data, options);
-    }
+    };
+    var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+}
