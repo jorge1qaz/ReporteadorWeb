@@ -1,6 +1,5 @@
 #fondo-login {
     background-image: url(../images/fondo.jpg);
-
 }
 
 /* fallback */
@@ -25,4 +24,14 @@
     direction: ltr;
     -moz-font-feature-settings: 'liga';
     -moz-osx-font-smoothing: grayscale;
+}
+.line-pdf {
+    border-color: transparent !important;
+    /*margin-bottom: 100px !important;
+    height: 300px !important;
+    position: absolute !important;
+    float: left !important;*/
+}
+.line-pdf-header {
+    height: 0px !important;   
 }

@@ -1,4 +1,3 @@
-h3 Estado de ganancias y pérdidas
 .row
     .col.m3.s12
         .card-panel.z-depth-4.grey.lighten-4
@@ -21,23 +20,56 @@ h3 Estado de ganancias y pérdidas
                     i.material-icons.left picture_as_pdf
     .col.m9.s12
         .form
+            h4 Estado de ganancias y pérdidas
             label(for='' style="display: none;") s
-            input.disabled(type="text" style="display: inline;" readonly="true")
-            .card-panel.z-depth-2
-                h5 Ejercicio 2017 (Dólares)
-                .row
-                    .col.m10
+            input.line-pdf.line-pdf-header(type="text" style="display: inline;" readonly="true")
+            //.row
+                .col.m10
+                    .card-panel.z-depth-2
+                        h5 Gráfico de barras
                         .card-body
-                            script(type='text/javascript', src='https://www.gstatic.com/charts/loader.js')
                             #chart_div
-                            script(src="../js/owner/RW-003.js" text='javascript')
+            .row
+                .col.m10
+                    .card-panel.z-depth-2
+                        h5 Gráfico lineal 
+                        .card-body
+                            #chart_div2
+            .row
+                .col.m10
+                    .card-panel.z-depth-2
+                        h5 Gráfico de barras 
+                        .card-body
+                            #chart_div3
+                            br
             label(for='' style="display: none;") s
-            input.disabled(type="text" readonly="true" style="display: inline;")
+            input.line-pdf(type="text" readonly="true")
             label(for='' style="display: none;") s
-            input.disabled(type="text" readonly="true" style="display: inline;")
+            input.line-pdf(type="text" readonly="true")
             label(for='' style="display: none;") s
-            input.disabled(type="text" readonly="true" style="display: inline;")
+            input.line-pdf(type="text" readonly="true")
             label(for='' style="display: none;") s
-            input.disabled(type="text" readonly="true" style="display: inline;")
+            input.line-pdf(type="text" readonly="true")
             label(for='' style="display: none;") s
-            input.disabled(type="text" readonly="true" style="display: inline;")
+            input.line-pdf(type="text" readonly="true")
+            label(for='' style="display: none;") s
+            input.line-pdf(type="text" readonly="true")
+            label(for='' style="display: none;") s
+            input.line-pdf(type="text" readonly="true")
+            label(for='' style="display: none;") s
+            input.line-pdf(type="text" readonly="true")
+            label(for='' style="display: none;") s
+            input.line-pdf(type="text" readonly="true")
+            label(for='' style="display: none;") s
+            input.line-pdf(type="text" readonly="true")
+            label(for='' style="display: none;") s
+            input.line-pdf(type="text" readonly="true")
+            label(for='' style="display: none;") s
+            input.line-pdf(type="text" readonly="true")
+            label(for='' style="display: none;") s
+            input.line-pdf(type="text" readonly="true")
+            label(for='' style="display: none;") s
+            input.line-pdf(type="text" readonly="true")
+            label(for='' style="display: none;") s
+            input.line-pdf(type="text" readonly="true")
+script(src="../js/owner/RW-003.js" text='javascript')

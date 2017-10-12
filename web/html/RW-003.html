@@ -11,6 +11,7 @@
     <script src="../js/materialize/bin/materialize.min.js" text="javascript"></script>
     <script src="../js/owner/login.js" text="javascript"></script>
     <script src="../js/owner/general.js" text="javascript"></script>
+    <script src="../js/graficos/loader.js" text="javascript"></script>
     <title>Reportes</title>
   </head>
   <header>
@@ -84,7 +85,6 @@
         </ul>
       </div>
     </nav>
-    <h3>Estado de ganancias y pérdidas</h3>
     <div class="row">
       <div class="col m3 s12">
         <div class="card-panel z-depth-4 grey lighten-4">
@@ -103,33 +103,70 @@
       </div>
       <div class="col m9 s12">
         <div class="form">
+          <h4>Estado de ganancias y pérdidas</h4>
           <label for="" style="display: none;">s</label>
-          <input class="disabled" type="text" style="display: inline;" readonly="true"/>
-          <div class="card-panel z-depth-2">
-            <h5>Ejercicio 2017 (Dólares)</h5>
-            <div class="row">
-              <div class="col m10">
+          <input class="line-pdf line-pdf-header" type="text" style="display: inline;" readonly="true"/>
+          <!--.row
+          .col.m10
+              .card-panel.z-depth-2
+                  h5 Gráfico de barras
+                  .card-body
+                      #chart_div
+          -->
+          <div class="row">
+            <div class="col m10">
+              <div class="card-panel z-depth-2">
+                <h5>Gráfico lineal </h5>
                 <div class="card-body">
-                  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                  <div id="chart_div"></div>
-                  <script src="../js/owner/RW-003.js" text="javascript"></script>
+                  <div id="chart_div2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col m10">
+              <div class="card-panel z-depth-2">
+                <h5>Gráfico de barras </h5>
+                <div class="card-body">
+                  <div id="chart_div3"></div><br/>
                 </div>
               </div>
             </div>
           </div>
           <label for="" style="display: none;">s</label>
-          <input class="disabled" type="text" readonly="true" style="display: inline;"/>
+          <input class="line-pdf" type="text" readonly="true"/>
           <label for="" style="display: none;">s</label>
-          <input class="disabled" type="text" readonly="true" style="display: inline;"/>
+          <input class="line-pdf" type="text" readonly="true"/>
           <label for="" style="display: none;">s</label>
-          <input class="disabled" type="text" readonly="true" style="display: inline;"/>
+          <input class="line-pdf" type="text" readonly="true"/>
           <label for="" style="display: none;">s</label>
-          <input class="disabled" type="text" readonly="true" style="display: inline;"/>
+          <input class="line-pdf" type="text" readonly="true"/>
           <label for="" style="display: none;">s</label>
-          <input class="disabled" type="text" readonly="true" style="display: inline;"/>
+          <input class="line-pdf" type="text" readonly="true"/>
+          <label for="" style="display: none;">s</label>
+          <input class="line-pdf" type="text" readonly="true"/>
+          <label for="" style="display: none;">s</label>
+          <input class="line-pdf" type="text" readonly="true"/>
+          <label for="" style="display: none;">s</label>
+          <input class="line-pdf" type="text" readonly="true"/>
+          <label for="" style="display: none;">s</label>
+          <input class="line-pdf" type="text" readonly="true"/>
+          <label for="" style="display: none;">s</label>
+          <input class="line-pdf" type="text" readonly="true"/>
+          <label for="" style="display: none;">s</label>
+          <input class="line-pdf" type="text" readonly="true"/>
+          <label for="" style="display: none;">s</label>
+          <input class="line-pdf" type="text" readonly="true"/>
+          <label for="" style="display: none;">s</label>
+          <input class="line-pdf" type="text" readonly="true"/>
+          <label for="" style="display: none;">s</label>
+          <input class="line-pdf" type="text" readonly="true"/>
+          <label for="" style="display: none;">s</label>
+          <input class="line-pdf" type="text" readonly="true"/>
         </div>
       </div>
     </div>
+    <script src="../js/owner/RW-003.js" text="javascript"></script>
   </body>
   <script src="../js/pdf2/jspdf.min.js" text="javascript"></script>
   <script src="../js/pdf2/html2pdf.js" text="javascript"></script>
