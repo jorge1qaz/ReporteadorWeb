@@ -10,6 +10,7 @@
     <!--script(src="../js/pdf/jquery.min.js" text='javascript')-->
     <script src="../js/materialize/bin/materialize.min.js" text="javascript"></script>
     <script src="../js/owner/login.js" text="javascript"></script>
+    <script src="../js/owner/general.js" text="javascript"></script>
     <title>Reportes</title>
   </head>
   <header>
@@ -31,13 +32,13 @@
           <ul class="tabs tabs-transparent black-text">
             <div class="col offset-m7 m3" id="lblNombreUsuario">
               <li class="tab right">
-                <label class="black-text">Franco Rojas</label>
+                <label class="black-text" id="lblNombre">Franco Rojas</label>
               </li>
             </div>
             <div class="col m1">   
               <li class="tab right">
                 <div class="row">
-                  <div class="col m8 s4"><img class="responsive-img circle right" src="../images/user.jpg" alt="imagen de usuario"/></div>
+                  <div class="col m8 s4"><img class="responsive-img circle right" id="imgPerfil" src="../images/user.jpg" alt="imagen de usuario"/></div>
                   <div class="col m4 right"><i class="material-icons tooltipped" id="btnCerrarSesion" style="margin-top: -6px;" data-position="bottom" data-delay="50" data-tooltip="Cerrar sesión">input </i></div>
                 </div>
               </li>
@@ -86,7 +87,7 @@
     <h3>Estado de ganancias y pérdidas</h3>
     <div class="row">
       <div class="col m3 s12">
-        <div class="card-panel z-depth-4">
+        <div class="card-panel z-depth-4 grey lighten-4">
           <label>Opciones</label>
           <div class="card-body">
             <select class="browser-default">
@@ -94,16 +95,16 @@
               <option value="1">Dólares</option>
               <option value="2">Nuevos soles</option>
             </select><br/>
-            <button class="btn indigo waves-effect waves-light darken-4" style="width: 100%;">Mensual </button><br/><br/>
-            <button class="btn indigo waves-effect waves-light darken-4" style="width: 100%;">Acumulado</button><br/><br/>
-            <button class="btn waves-effect waves-light red lighten-1" id="create_pdf" style="width: 100%;">Descargar</button>
+            <button class="btn waves-effect waves-light light-blue darken-2" style="width: 100%;">Mensual <i class="material-icons left">monetization_on</i></button><br/><br/>
+            <button class="btn waves-effect waves-light light-blue darken-2" style="width: 100%;">Acumulado<i class="material-icons left">show_chart</i></button><br/><br/>
+            <button class="btn waves-effect waves-light green lighten-2" id="create_pdf" style="width: 100%;">Descargar<i class="material-icons left">picture_as_pdf</i></button>
           </div>
         </div>
       </div>
       <div class="col m9 s12">
         <div class="form">
           <label for="" style="display: none;">s</label>
-          <input class="disabled" type="text" style="display: inline;" readonly="true" disabled="true"/>
+          <input class="disabled" type="text" style="display: inline;" readonly="true"/>
           <div class="card-panel z-depth-2">
             <h5>Ejercicio 2017 (Dólares)</h5>
             <div class="row">
@@ -117,15 +118,15 @@
             </div>
           </div>
           <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
+          <input class="disabled" type="text" readonly="true" style="display: inline;"/>
           <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
+          <input class="disabled" type="text" readonly="true" style="display: inline;"/>
           <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
+          <input class="disabled" type="text" readonly="true" style="display: inline;"/>
           <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
+          <input class="disabled" type="text" readonly="true" style="display: inline;"/>
           <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
+          <input class="disabled" type="text" readonly="true" style="display: inline;"/>
         </div>
       </div>
     </div>

@@ -10,6 +10,7 @@
     <!--script(src="../js/pdf/jquery.min.js" text='javascript')-->
     <script src="../js/materialize/bin/materialize.min.js" text="javascript"></script>
     <script src="../js/owner/login.js" text="javascript"></script>
+    <script src="../js/owner/general.js" text="javascript"></script>
     <title>Reportes</title>
   </head>
   <header>
@@ -31,13 +32,13 @@
           <ul class="tabs tabs-transparent black-text">
             <div class="col offset-m7 m3" id="lblNombreUsuario">
               <li class="tab right">
-                <label class="black-text">Franco Rojas</label>
+                <label class="black-text" id="lblNombre">Franco Rojas</label>
               </li>
             </div>
             <div class="col m1">   
               <li class="tab right">
                 <div class="row">
-                  <div class="col m8 s4"><img class="responsive-img circle right" src="../images/user.jpg" alt="imagen de usuario"/></div>
+                  <div class="col m8 s4"><img class="responsive-img circle right" id="imgPerfil" src="../images/user.jpg" alt="imagen de usuario"/></div>
                   <div class="col m4 right"><i class="material-icons tooltipped" id="btnCerrarSesion" style="margin-top: -6px;" data-position="bottom" data-delay="50" data-tooltip="Cerrar sesión">input </i></div>
                 </div>
               </li>

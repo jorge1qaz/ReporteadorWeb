@@ -1,7 +1,7 @@
 h3 Estado de ganancias y pérdidas
 .row
     .col.m3.s12
-        .card-panel.z-depth-4
+        .card-panel.z-depth-4.grey.lighten-4
             label Opciones
             .card-body
                 select.browser-default
@@ -9,17 +9,20 @@ h3 Estado de ganancias y pérdidas
                     option(value='1') Dólares
                     option(value='2') Nuevos soles
                 br
-                button.btn.indigo.waves-effect.waves-light.darken-4(style="width: 100%;") Mensual 
+                button.btn.waves-effect.waves-light.light-blue.darken-2(style="width: 100%;") Mensual 
+                    i.material-icons.left monetization_on
                 br
                 br
-                button.btn.indigo.waves-effect.waves-light.darken-4(style="width: 100%;") Acumulado
+                button.btn.waves-effect.waves-light.light-blue.darken-2(style="width: 100%;") Acumulado
+                    i.material-icons.left show_chart
                 br
                 br
-                button.btn.waves-effect.waves-light.red.lighten-1#create_pdf(style="width: 100%;") Descargar
+                button.btn.waves-effect.waves-light.green.lighten-2#create_pdf(style="width: 100%;") Descargar
+                    i.material-icons.left picture_as_pdf
     .col.m9.s12
         .form
             label(for='' style="display: none;") s
-            input.disabled(type="text" style="display: inline;" readonly="true" disabled="true")
+            input.disabled(type="text" style="display: inline;" readonly="true")
             .card-panel.z-depth-2
                 h5 Ejercicio 2017 (Dólares)
                 .row
@@ -29,12 +32,12 @@ h3 Estado de ganancias y pérdidas
                             #chart_div
                             script(src="../js/owner/RW-003.js" text='javascript')
             label(for='' style="display: none;") s
-            input(type="text" style="display: inline;")
+            input.disabled(type="text" readonly="true" style="display: inline;")
             label(for='' style="display: none;") s
-            input(type="text" style="display: inline;")
+            input.disabled(type="text" readonly="true" style="display: inline;")
             label(for='' style="display: none;") s
-            input(type="text" style="display: inline;")
+            input.disabled(type="text" readonly="true" style="display: inline;")
             label(for='' style="display: none;") s
-            input(type="text" style="display: inline;")
+            input.disabled(type="text" readonly="true" style="display: inline;")
             label(for='' style="display: none;") s
-            input(type="text" style="display: inline;")
+            input.disabled(type="text" readonly="true" style="display: inline;")

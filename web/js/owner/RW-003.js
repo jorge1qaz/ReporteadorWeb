@@ -20,8 +20,13 @@ function drawStacked() {
 
     var options = {
         title: 'Resultado anual de la empresa XXXXXXXX',
-        chartArea: { width: '50%' },
+        chartArea: 
+        { 
+            width: '60%',
+            height: '100%'
+        },
         isStacked: true,
+        
         hAxis: {
             title: 'Total',
             minValue: 0,
@@ -29,7 +34,18 @@ function drawStacked() {
         vAxis: {
             title: 'Meses'
         }
+
     };
     var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
     chart.draw(data, options);
+
+    $( window ).resize(function() {
+        if($(window).width() < 481) //Celulares
+            $("#chart_div").hide();
+        else
+            if($(window).width() < 769) //Tabletas    
+                $("#chart_div").show();
+        else // Pcs o laptops.
+            $("#chart_div").show();
+    });
 }
