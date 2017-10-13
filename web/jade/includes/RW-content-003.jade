@@ -23,25 +23,51 @@
             h4 Estado de ganancias y pérdidas
             label(for='' style="display: none;") s
             input.line-pdf.line-pdf-header(type="text" style="display: inline;" readonly="true")
-            //.row
-                .col.m10
-                    .card-panel.z-depth-2
-                        h5 Gráfico de barras
-                        .card-body
-                            #chart_div
             .row
-                .col.m10
-                    .card-panel.z-depth-2
-                        h5 Gráfico lineal 
-                        .card-body
-                            #chart_div2
-            .row
-                .col.m10
-                    .card-panel.z-depth-2
-                        h5 Gráfico de barras 
-                        .card-body
-                            #chart_div3
-                            br
+                .col.m10.s12
+                    .row
+                        .card-panel.z-depth-4
+                            h5 Resumen
+                            .card-body
+                                table.table.bordered.striped.centered.responsive-table
+                                    thead
+                                        tr
+                                            th Enero
+                                            th Febrero
+                                            th Marzo
+                                            th Abril
+                                            th Mayo
+                                            th Junio
+                                    tbody
+                                        tr
+                                            td S/ 817500
+                                            td S/ 379200
+                                            td S/ 2695000
+                                            td S/ 2099000
+                                            td S/ 1526000
+                                            td S/ 1526000
+                                table.table.bordered.striped.centered.responsive-table
+                                    thead
+                                        tr
+                                            th Julio
+                                            th Agosto
+                                            th Septiembre
+                                            th Octubre
+                                            th Noviembre
+                                            th Diciembre
+                                    tbody
+                                        tr
+                                            td S/ 817500
+                                            td S/ 1645000
+                                            td S/ 1526000
+                                            td S/ 485000
+                                            td S/ 1526000
+                                            td S/ 817500
+                    .row
+                        .card-panel.z-depth-4
+                            h5 Gráfico de barras 
+                            .card-body
+                                #chart_div3
             label(for='' style="display: none;") s
             input.line-pdf(type="text" readonly="true")
             label(for='' style="display: none;") s
