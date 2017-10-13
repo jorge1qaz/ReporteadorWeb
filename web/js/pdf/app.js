@@ -77,6 +77,6 @@ if(dia < 10) {
 }
 var fechaCompleto = anio + "." + mes + "." + dia;
 
-doc.save(fechaCompleto + ' Reporte de ganancias y pÃ©rdidas.pdf');
+doc.save(fechaCompleto + ' Reporte de ganancias y pérdidas.pdf');
 form.width(cache_width);
 }
