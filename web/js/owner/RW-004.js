@@ -6,7 +6,7 @@ $(function(){
 
     });
 
-    $('#tblListaCuentas').DataTable( {
+    $('#example').DataTable( {
         //"ajax": "datos.json",
         "ajax":"../js/data/listaCuentas.json",
         "columns": [
