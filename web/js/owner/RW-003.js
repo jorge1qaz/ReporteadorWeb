@@ -18,6 +18,13 @@ function DibujarGraficoBarras () {
         ['Diciembre', 817500]
     ]);
 
+    /*var jsonDataJS = $.ajax({
+				url: "RW-003-datos-soles.json",
+				dataType: "json",
+				async: false
+			}).responseText;
+    var data = new google.visualization.DataTable(jsonDataJS);*/
+
     var view = new google.visualization.DataView(data);
     view.setColumns([0, 1,
                      { calc: "stringify",

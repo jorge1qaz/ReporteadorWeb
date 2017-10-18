@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link href="../style/materialize/materialize.css" rel="stylesheet"/>
     <link href="../style/owner.css" rel="stylesheet"/>
+    <link href="../style/styles.css" rel="stylesheet"/>
     <script src="../js/jquery-3.2.1.min.js" text="javascript"></script>
     <!--script(src="../js/pdf/jquery.min.js" text='javascript')-->
     <script src="../js/materialize/bin/materialize.min.js" text="javascript"></script>
@@ -86,50 +87,134 @@
       </div>
     </nav>
     <div class="row">
-      <div class="col m3">
-        <div class="center teal" id="create_pdf">Create PDF</div>
+      <div class="col m3 s12"><br/><br/><br/>
+        <div class="card-panel z-depth-4 light-blue darken-4">
+          <label>Opciones</label>
+          <div class="card-body">
+            <div class="form">
+              <div class="row">
+                <div class="input-field">
+                  <input class="validate disabled" id="txtCuenta" type="text"/>
+                  <label for="txtCuenta">Número de cuenta</label>
+                </div>
+              </div>
+            </div>
+            <button class="btn waves-effect waves-light light-green darken-2" id="triggerModal" style="width: 100%;">Buscar cuenta<i class="material-icons left">search</i></button><br/><br/>
+            <label>Mes de proceso</label>
+            <select class="browser-default light-green darken-2">
+              <option value="" disabled="" selected="">Octubre</option>
+              <option value="1">Enero</option>
+              <option value="2">Febrero</option>
+              <option value="3">Abril</option>
+              <option value="4">Mayo</option>
+              <option value="5">Junio</option>
+              <option value="6">Julio</option>
+              <option value="7">Agosto</option>
+              <option value="8">Septiembre</option>
+              <option value="9">Octubre</option>
+            </select>
+          </div>
+        </div>
       </div>
-      <div class="col m9">
+      <div class="col m9 s12">
         <div class="form">
-          <label for="" style="display: none;">s</label>
-          <input class="disabled" type="text" style="display: inline;" readonly="true" disabled="true"/>
           <div class="row">
-            <div class="col m10">
-              <div class="card-panel z-depth-2">
-                <h5>Ejercicio 2017 (Dólares)</h5>
+            <div class="col m10 s12">
+              <h4>Cuentas pendientes </h4>
+              <label for="" style="display: none;">s</label>
+              <div class="card-panel z-depth-4">
+                <h5>Resumen</h5>
                 <div class="card-body">
-                  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                  <div id="chart_div"></div>
-                  <script src="../js/owner/RW-003.js" text="javascript"></script>
+                  <table class="table bordered striped centered responsive-table">
+                    <thead>
+                      <tr>
+                        <th>Empresa</th>
+                        <th>Monto</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td> 
+                          <label>Continental SAC</label>
+                        </td>
+                        <td>
+                          <label>S/ 817500</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <label>Essalud</label>
+                        </td>
+                        <td>
+                          <label>S/ 817500</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <label>Continental SAC</label>
+                        </td>
+                        <td>
+                          <label>S/ 817500</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td> 
+                          <label>Essalud</label>
+                        </td>
+                        <td>
+                          <label>S/ 817500</label>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="card-panel z-depth-4">
+                <h5>Gráfico de barras </h5>
+                <div class="card-body">
+                  <div id="chart_div3"></div>
                 </div>
               </div>
             </div>
           </div>
           <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
+          <input class="line-pdf" type="text" readonly="true"/>
           <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
+          <input class="line-pdf" type="text" readonly="true"/>
           <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
+          <input class="line-pdf" type="text" readonly="true"/>
           <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
+          <input class="line-pdf" type="text" readonly="true"/>
           <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
-          <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
-          <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
-          <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
-          <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
-          <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
-          <label for="" style="display: none;">s</label>
-          <input type="text" style="display: inline;"/>
+          <input class="line-pdf" type="text" readonly="true"/>
         </div>
       </div>
     </div>
+    <div class="modal" id="modalBuscarCuenta">
+      <div class="modal-content">
+        <h4 class="center">Número de cuentas</h4>
+        <div class="row">
+          <table class="display" id="tblListaCuentas" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th>Cuenta</th>
+                <th>Detalle</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>Cuenta</th>
+                <th>Detalle</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class="row"></div>
+      </div>
+      <div class="modal-footer"><a class="modal-action modal-close waves-effect waves-green btn-flat" href="#">Cerrar</a></div>
+    </div>
+    <script src="../js/datatables/dataTables.js"></script>
+    <script src="../js/owner/RW-004.js" text="javascript"></script>
   </body>
   <script src="../js/pdf2/jspdf.min.js" text="javascript"></script>
   <script src="../js/pdf2/html2pdf.js" text="javascript"></script>
