@@ -8,7 +8,7 @@ $(function(){
 
     $('#example2').DataTable( {
         //"ajax": "datos.json",
-        "ajax":"../js/data/listaCuentas.json",
+        "ajax":"../js/data/listaCuentas.min.json",
         "columns": [
             { "data": "ccod_cue" },
             { "data": "cdsc" }
@@ -40,10 +40,9 @@ $(function(){
     } );
     $('#example').DataTable( {
         //"ajax": "datos.json",
-        "ajax":"../js/data/reporteCuentaspendientes.json",
+        "ajax":"../js/data/reporteCuentaspendientes.min.json",
         "columns": [
             { "data": "ccod_cli" },
-            { "data": "cmes" },
             { "data": "debe" },
             { "data": "haber" },
             { "data": "total" },
@@ -72,6 +71,16 @@ $(function(){
                 "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
                 "sSortDescending": ": Activar para ordenar la columna de manera descendente"
             }
-        }
+        },
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excelHtml5', 'pdf', 'print'
+        ]
     } );
+
+    $(".buttons-html5").addClass("btn blue lighten-1");
+    $(".buttons-print").addClass("btn blue lighten-1");
+    $(".buttons-copy span:first").text("Copiar");
+    $(".buttons-print span:first").text("Imprimir");
+
 });
