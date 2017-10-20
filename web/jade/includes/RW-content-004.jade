@@ -36,32 +36,23 @@
                     .card-panel.z-depth-4
                         h5 Resumen
                         .card-body
-                            table.table.bordered.striped.centered.responsive-table
+                            table#example.display.table.bordered.striped.centered.responsive-table(cellspacing='0', width='100%')
                                 thead
                                     tr
-                                        th Empresa
-                                        th Monto
-                                tbody
+                                        th ccod_cli
+                                        th cmes
+                                        th debe
+                                        th haber
+                                        th total
+                                        th crazon
+                                tfoot
                                     tr
-                                        td 
-                                            label Continental SAC
-                                        td
-                                            label S/ 817500
-                                    tr
-                                        td 
-                                            label Essalud
-                                        td
-                                            label S/ 817500
-                                    tr
-                                        td 
-                                            label Continental SAC
-                                        td
-                                            label S/ 817500
-                                    tr
-                                        td 
-                                            label Essalud
-                                        td
-                                            label S/ 817500
+                                        th ccod_cli
+                                        th cmes
+                                        th debe
+                                        th haber
+                                        th total
+                                        th crazon
                     .card-panel.z-depth-4
                         h5 Gráfico de barras 
                         .card-body
@@ -81,7 +72,7 @@
     .modal-content
         h4.center Número de cuentas
         .row
-            table#example.display(cellspacing='0', width='100%')
+            table#example2.display(cellspacing='0', width='100%')
                 thead
                     tr
                         th Cuenta
@@ -90,10 +81,6 @@
                     tr
                         th Cuenta
                         th Detalle
-        .row
-            
-                        
-        
     .modal-footer
         a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#') Cerrar
 script(src='../js/datatables/datatables.js')
