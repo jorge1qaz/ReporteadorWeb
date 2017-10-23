@@ -16,7 +16,7 @@
                 br
                 br
                 label Mes de proceso
-                select.browser-default.light-green.darken-2
+                select.browser-default.light-green.darken-2#optMes
                     option(value='', disabled='', selected='') Diciembre
                     option(value='1') Enero
                     option(value='2') Febrero
@@ -37,6 +37,9 @@
                     option(value='1') 2014
                     option(value='2') 2015
                     option(value='3') 2016
+                br
+                button.btn.waves-effect.waves-light.light-green.darken-2#btnPruebas(style="width: 100%;") Generar reporte
+                    i.material-icons.left show_chart
     .col.m9.s12
         .form
             .row
@@ -46,7 +49,7 @@
                     .card-panel.z-depth-4
                         h5 Resumen
                         .card-body
-                            table#example.display.table.bordered.striped.centered.responsive-table.nowrap(cellspacing='0', width='100%')
+                            table#tablaReporte.display.table.bordered.striped.centered.responsive-table.nowrap(cellspacing='0', width='100%')
                                 thead
                                     tr
                                         th RUC
@@ -56,11 +59,11 @@
                                         th Razón social
                                 tfoot
                                     tr
-                                        th RUC
-                                        th Debe
-                                        th Haber
-                                        th Total
-                                        th Razón social
+                                        th.center RUC
+                                        th.center Debe
+                                        th.center Haber
+                                        th.center Total
+                                        th.center Razón social
                     //.card-panel.z-depth-4
                         h5 Gráfico de barras 
                         .card-body
@@ -80,15 +83,17 @@
     .modal-content
         h4.center Número de cuentas
         .row
-            table#example2.display(cellspacing='0', width='100%')
+            table#tablaCuentas.display(cellspacing='0', width='100%')
                 thead
                     tr
                         th Cuenta
                         th Detalle
+                        th
                 tfoot
                     tr
                         th Cuenta
                         th Detalle
+                        th
     .modal-footer
         a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#') Cerrar
 script(src='../js/datatables/datatables.js')
