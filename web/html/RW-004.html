@@ -88,21 +88,22 @@
     </nav>
     <div class="row">
       <div class="col m3 s12"><br/><br/><br/>
-        <div class="card-panel z-depth-4 light-blue darken-4">
-          <label>Opciones</label>
+        <div class="card-panel z-depth-4 color-chidori">
+          <label class="white-text">Opciones</label>
           <div class="card-body">
             <div class="form">
               <div class="row">
                 <div class="input-field">
                   <input class="validate disabled" id="txtCuenta" type="text"/>
-                  <label for="txtCuenta">Número de cuenta</label>
+                  <label class="white-text" for="txtCuenta">Número de cuenta</label>
                 </div>
               </div>
             </div>
-            <button class="btn waves-effect waves-light light-green darken-2" id="triggerModal" style="width: 100%;">Buscar cuenta<i class="material-icons left">search</i></button><br/><br/>
-            <label>Mes de proceso</label>
-            <select class="browser-default light-green darken-2" id="optMes">
+            <button class="btn waves-effect waves-light controles-chidori" id="triggerModal" style="width: 100%;">Buscar cuenta<i class="material-icons left">search</i></button><br/><br/>
+            <label class="white-text">Mes de proceso</label>
+            <select class="browser-default controles-chidori select-chidori" id="optMes">
               <option value="" disabled="" selected="">Diciembre</option>
+              <option value="0">Apertura</option>
               <option value="1">Enero</option>
               <option value="2">Febrero</option>
               <option value="3">Marzo</option>
@@ -116,21 +117,19 @@
               <option value="11">Noviembre</option>
               <option value="12">Diciembre</option>
             </select><br/>
-            <label>Año de proceso</label>
-            <select class="browser-default light-green darken-2">
+            <label class="white-text">Año de proceso</label>
+            <select class="browser-default controles-chidori select-chidori">
               <option value="" disabled="" selected="">2016</option>
-              <option value="1">2014</option>
-              <option value="2">2015</option>
               <option value="3">2016</option>
             </select><br/>
-            <button class="btn waves-effect waves-light light-green darken-2" id="btnPruebas" style="width: 100%;">Generar reporte<i class="material-icons left">show_chart</i></button>
+            <button class="btn waves-effect waves-light blue lighten-1" id="btnPruebas" style="width: 100%;">Generar reporte<i class="material-icons left">show_chart</i></button>
           </div>
         </div>
       </div>
       <div class="col m9 s12">
         <div class="form">
           <div class="row">
-            <div class="col m10 s12">
+            <div class="col m12 s10">
               <h4>Cuentas pendientes </h4>
               <label for="" style="display: none;">s</label>
               <div class="card-panel z-depth-4">
@@ -158,11 +157,6 @@
                   </table>
                 </div>
               </div>
-              <!--.card-panel.z-depth-4
-              h5 Gráfico de barras 
-              .card-body
-                  #chart_div3
-              -->
             </div>
           </div>
           <label for="" style="display: none;">s</label>
@@ -180,7 +174,7 @@
     </div>
     <div class="modal" id="modalBuscarCuenta">
       <div class="modal-content">
-        <h4 class="center">Número de cuentas</h4>
+        <h4 class="center">Cuentas contables</h4>
         <div class="row">
           <table class="display" id="tablaCuentas" cellspacing="0" width="100%">
             <thead>

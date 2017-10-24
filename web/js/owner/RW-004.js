@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     var $btnTriggerModal = $("#triggerModal");
     $btnTriggerModal.on("click", function () {
@@ -22,13 +21,14 @@ $(document).ready(function() {
     $(".buttons-copy span:first").text("Copiar");
     $(".buttons-print span:first").text("Imprimir");
 });
-
+    var $idMesProceso = 12;
     function GenerarReporte() {
         listarReporte($("#txtCuenta").val(), $idMesProceso);
         $(".buttons-html5").addClass("btn blue lighten-1");
         $(".buttons-print").addClass("btn blue lighten-1");
         $(".buttons-copy span:first").text("Copiar");
         $(".buttons-print span:first").text("Imprimir");
+        console.log($("#txtCuenta").val(), $idMesProceso);
     }
     var listarCuentas = function() {
         var tblCuentas = $('#tablaCuentas').DataTable( {
@@ -38,7 +38,8 @@ $(document).ready(function() {
                 { "data": "cdsc" },
                 { "defaultContent": "<i class='material-icons'>check_circle</i>"}
             ],
-            "language": idioma
+            "language": idioma,
+            responsive: true
         } );
         GetIdCuenta("#tablaCuentas", tblCuentas);
     }
@@ -73,8 +74,6 @@ $(document).ready(function() {
             "sSortDescending": ": Activar para ordenar la columna de manera descendente"
         }
     }
-
-    var $idMesProceso = 8;
     function CambiarValorMes(){
         var select = document.getElementById("optMes");
         var options=document.getElementsByTagName("option");
@@ -86,7 +85,6 @@ $(document).ready(function() {
 
     $("#btnPruebas").on("click", function() {
         GenerarReporte();
-
     });
 
     var listarReporte = function(idCuenta, idMesProceso) {
@@ -104,7 +102,8 @@ $(document).ready(function() {
             dom: 'Bfrtip',
             buttons: [
                 'copy', 'csv', 'excelHtml5', 'pdf', 'print'
-            ]
+            ],
+            "order": [[ 3, "desc" ]]
         } );
     }
 

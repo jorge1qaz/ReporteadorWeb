@@ -3,21 +3,22 @@
         br
         br
         br
-        .card-panel.z-depth-4.light-blue.darken-4
-            label Opciones
+        .card-panel.z-depth-4.color-chidori
+            label.white-text Opciones
             .card-body
                 .form
                     .row
                         .input-field
                             input#txtCuenta.validate.disabled(type='text')
-                            label(for='txtCuenta') Número de cuenta
-                button.btn.waves-effect.waves-light.light-green.darken-2#triggerModal(style="width: 100%;") Buscar cuenta
+                            label.white-text(for='txtCuenta') Número de cuenta
+                button.btn.waves-effect.waves-light.controles-chidori#triggerModal(style="width: 100%;") Buscar cuenta
                     i.material-icons.left search
                 br
                 br
-                label Mes de proceso
-                select.browser-default.light-green.darken-2#optMes
+                label.white-text Mes de proceso
+                select.browser-default.controles-chidori.select-chidori#optMes
                     option(value='', disabled='', selected='') Diciembre
+                    option(value='0') Apertura
                     option(value='1') Enero
                     option(value='2') Febrero
                     option(value='3') Marzo
@@ -31,19 +32,17 @@
                     option(value='11') Noviembre
                     option(value='12') Diciembre
                 br
-                label Año de proceso
-                select.browser-default.light-green.darken-2
+                label.white-text Año de proceso
+                select.browser-default.controles-chidori.select-chidori
                     option(value='', disabled='', selected='') 2016
-                    option(value='1') 2014
-                    option(value='2') 2015
                     option(value='3') 2016
                 br
-                button.btn.waves-effect.waves-light.light-green.darken-2#btnPruebas(style="width: 100%;") Generar reporte
+                button.btn.waves-effect.waves-light.blue.lighten-1#btnPruebas(style="width: 100%;") Generar reporte
                     i.material-icons.left show_chart
     .col.m9.s12
         .form
             .row
-                .col.m10.s12
+                .col.m12.s10
                     h4 Cuentas pendientes 
                     label(for='' style="display: none;") s
                     .card-panel.z-depth-4
@@ -64,10 +63,6 @@
                                         th.center Haber
                                         th.center Total
                                         th.center Razón social
-                    //.card-panel.z-depth-4
-                        h5 Gráfico de barras 
-                        .card-body
-                            #chart_div3
             label(for='' style="display: none;") s
             input.line-pdf(type="text" readonly="true")
             label(for='' style="display: none;") s
@@ -81,7 +76,7 @@
             
 #modalBuscarCuenta.modal
     .modal-content
-        h4.center Número de cuentas
+        h4.center Cuentas contables
         .row
             table#tablaCuentas.display(cellspacing='0', width='100%')
                 thead

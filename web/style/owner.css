@@ -9,7 +9,7 @@
     font-weight: 400;
     src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/iconos.woff2) format('woff2');
   }
-  
+
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -33,5 +33,15 @@
     float: left !important;*/
 }
 .line-pdf-header {
-    height: 0px !important;   
+    height: 0px !important;
+}
+.color-chidori {
+    background: -webkit-linear-gradient(top, #0B3E81, #FFF);
+}
+.select-chidori {
+    border-color: #bbdefb;
+    border: 1px;
+}
+.controles-chidori {
+    background-color: rgba(206, 231, 243, 0.77) !important;
 }
