@@ -1,0 +1,91 @@
+form#Formulario(action="javascript: void(0)")
+    .container
+        .row
+            .col-md-3
+                br
+                .row
+                    .card.card-inverse.card-info.text-center
+                        .card-block
+                            .form-group
+                                label(for='exampleInputEmail1') Número de cuenta
+                                input#txtCuenta.form-control(type='text', placeholder='Escribe el número de cuenta' name="txtCuentaName")
+                                small#Help.form-text.text-muted También puedes revisar las cuentas que tengan registros en tu base de datos.
+                            .form-group
+                                button.btn.btn-primary.form-control(type='button', id='triggerModal' ) Buscar cuenta
+                            .form-group
+                                label(for='lstEmpresas') Empresa
+                                select#lstEmpresas.form-control
+                                    option(value='', disabled='', selected='') Seleccione
+                                    option(value='0') Empresa 1
+                            .form-group
+                                label(for='exampleSelect1') Mes de proceso
+                                select#optMes.form-control
+                                    option(value='', disabled='', selected='') Seleccione
+                                    option(value='0') Apertura
+                                    option(value='1') Enero
+                                    option(value='2') Febrero
+                                    option(value='3') Marzo
+                                    option(value='4') Abril
+                                    option(value='5') Mayo
+                                    option(value='6') Junio
+                                    option(value='7') Julio
+                                    option(value='8') Agosto
+                                    option(value='9') Septiembre
+                                    option(value='10') Octubre
+                                    option(value='11') Noviembre
+                                    option(value='12') Diciembre
+                            .form-group
+                                label Año de proceso
+                                select.form-control#lstAnios
+                                    option(value='', disabled='', selected='') Seleccione
+                                    option(value='3') 2016
+                            .form-group
+                                button.btn.btn-success.form-control#btnPruebas(type="submit") Generar reporte
+                                    //i.material-icons.left show_chart
+            .col-md-9
+                br
+                .row
+                    .card.card-outline-secondary.mb-3.text-center
+                        .card-block
+                            h4.card-title Reporte de 
+                            table#tablaReporte.table.table-striped.table-bordered.table-responsive
+                                thead
+                                    tr
+                                        th RUC
+                                        th Debe
+                                        th Haber
+                                        th Total
+                                        th Razón social
+                                tfoot
+                                    tr
+                                        th.center RUC
+                                        th.center Debe
+                                        th.center Haber
+                                        th.center Total
+                                        th.center Razón social
+                                
+    #modalBuscarCuenta.modal.fade.bd-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='modalBuscarCuentaLabel', aria-hidden='true')
+        .modal-dialog.modal-lg(role='document')
+            .modal-content
+                .modal-header
+                    h5#modalBuscarCuentaLabel.modal-title Cuentas contables
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    table#tablaCuentas.table.table-striped.table-bordered
+                        thead
+                            tr
+                                th Cuenta
+                                th Detalle
+                                th
+                        tfoot
+                            tr
+                                th Cuenta
+                                th Detalle
+                                th
+                    br
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Cerrar
+script(src='https://cdn.datatables.net/buttons/1.4.2/js/buttons.html5.min.js')
+script(src='https://cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js')
+script(src="../js/owner/RW-004-b.js" text='javascript')

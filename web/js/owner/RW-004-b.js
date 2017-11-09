@@ -1,7 +1,6 @@
 $(document).ready(function() {
     var $btnTriggerModal = $("#triggerModal");
     $btnTriggerModal.on("click", function () {
-        $('.modal').modal();
         $('#modalBuscarCuenta').modal('show');
         $("tr").find(".material-icons").hover(function() {
             $(this).addClass("text-info")
@@ -10,8 +9,8 @@ $(document).ready(function() {
             $(this).removeClass("text-info")
                     .css("cursor", "initial");
         }).on("click", function() {
-            $('#modalBuscarCuenta').modal('close');
             GenerarReporte();
+            $('#modalBuscarCuenta').modal('hide');
         });
     });
 
@@ -20,6 +19,44 @@ $(document).ready(function() {
     $(".buttons-print").addClass("btn blue lighten-1");
     $(".buttons-copy span:first").text("Copiar");
     $(".buttons-print span:first").text("Imprimir");
+
+    //Validaciones
+    var formulario = $("#Formulario");
+    $(formulario).validate({
+        rules: {
+            txtCuentaName: {
+                integer: true,
+                required: true,
+                number: true,
+                maxlength: 10
+            }
+        },
+        messages: {
+            txtCuentaName: {
+                integer: "Sólo números enteros",
+                required: "Este campo es obligatorio",
+                number: "Sólo se adminten números",
+                maxlength: "El número máximo de carácteres es 10"
+            }
+        },
+        errorElement: "em",
+        errorPlacement: function (error, element) {
+            // Add the `help-block` class to the error element
+            error.addClass("help-block");
+
+            if (element.prop("type") === "checkbox") {
+                error.insertAfter(element.parent("label"));
+            } else {
+                error.insertAfter(element);
+            }
+        },
+        highlight: function (element, errorClass, validClass) {
+            $(element).parents(".form-group").addClass("text-danger").removeClass("text-sucess");
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).parents(".form-group").addClass("text-sucess").removeClass("text-danger");
+        }
+    });
 });
     var $idMesProceso = 12;
     function GenerarReporte() {
@@ -105,29 +142,4 @@ $(document).ready(function() {
             ],
             "order": [[ 3, "desc" ]]
         } );
-    }
-
-    var idioma = {
-        "sProcessing":     "Procesando...",
-        "sLengthMenu":     "Mostrar _MENU_ registros",
-        "sZeroRecords":    "No se encontraron resultados",
-        "sEmptyTable":     "Ningún dato disponible en esta tabla",
-        "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-        "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
-        "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
-        "sInfoPostFix":    "",
-        "sSearch":         "Buscar:",
-        "sUrl":            "",
-        "sInfoThousands":  ",",
-        "sLoadingRecords": "Cargando...",
-        "oPaginate": {
-            "sFirst":    "Primero",
-            "sLast":     "Último",
-            "sNext":     "Siguiente",
-            "sPrevious": "Anterior"
-        },
-        "oAria": {
-            "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
-            "sSortDescending": ": Activar para ordenar la columna de manera descendente"
-        }
     }

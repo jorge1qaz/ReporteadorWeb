@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
+  <!--script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')-->
+  <script src="../js/jquery-3.2.1.min.js" text="javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../style/datatables/dataTables.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/buttons.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../fonts/google/material-icons.css"/>
+  <link rel="stylesheet" href="../style/datatables/autoFill.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/colReorder.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/fixedColumns.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/fixedHeader.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/keyTable.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/responsive.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/rowGroup.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/rowReorder.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/scroller.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/select.bootstrap4.min.css"/>
+  <script src="../js/datatables/jquery.dataTables.min.js" text="javascript"></script>
+  <script src="../js/datatables/dataTables.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/autoFill.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/buttons.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/responsive.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/validaciones/jquery.validate.min.js" text="javascript"></script>
+  <script src="../js/validaciones/additional-methods.min.js" text="javascript"></script>
+  <title>Reportes</title>
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#">Navbar</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search"/>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <body>
+    <form id="Formulario" action="javascript: void(0)">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"><br/>
+            <div class="row">
+              <div class="card card-inverse card-info text-center">
+                <div class="card-block">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Número de cuenta</label>
+                    <input class="form-control" id="txtCuenta" type="text" placeholder="Escribe el número de cuenta" name="txtCuentaName"/><small class="form-text text-muted" id="Help">También puedes revisar las cuentas que tengan registros en tu base de datos.</small>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-primary form-control" type="button" id="triggerModal">Buscar cuenta</button>
+                  </div>
+                  <div class="form-group">
+                    <label for="lstEmpresas">Empresa</label>
+                    <select class="form-control" id="lstEmpresas">
+                      <option value="" disabled="" selected="">Seleccione</option>
+                      <option value="0">Empresa 1</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleSelect1">Mes de proceso</label>
+                    <select class="form-control" id="optMes">
+                      <option value="" disabled="" selected="">Seleccione</option>
+                      <option value="0">Apertura</option>
+                      <option value="1">Enero</option>
+                      <option value="2">Febrero</option>
+                      <option value="3">Marzo</option>
+                      <option value="4">Abril</option>
+                      <option value="5">Mayo</option>
+                      <option value="6">Junio</option>
+                      <option value="7">Julio</option>
+                      <option value="8">Agosto</option>
+                      <option value="9">Septiembre</option>
+                      <option value="10">Octubre</option>
+                      <option value="11">Noviembre</option>
+                      <option value="12">Diciembre</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Año de proceso</label>
+                    <select class="form-control" id="lstAnios">
+                      <option value="" disabled="" selected="">Seleccione</option>
+                      <option value="3">2016</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-success form-control" id="btnPruebas" type="submit">Generar reporte
+                      <!--i.material-icons.left show_chart-->
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9"><br/>
+            <div class="row">
+              <div class="card card-outline-secondary mb-3 text-center">
+                <div class="card-block">
+                  <h4 class="card-title">Reporte de </h4>
+                  <table class="table table-striped table-bordered table-responsive" id="tablaReporte">
+                    <thead>
+                      <tr>
+                        <th>RUC</th>
+                        <th>Debe</th>
+                        <th>Haber</th>
+                        <th>Total</th>
+                        <th>Razón social</th>
+                      </tr>
+                    </thead>
+                    <tfoot>
+                      <tr>
+                        <th class="center">RUC</th>
+                        <th class="center">Debe</th>
+                        <th class="center">Haber</th>
+                        <th class="center">Total</th>
+                        <th class="center">Razón social</th>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade bd-example-modal-lg" id="modalBuscarCuenta" tabindex="-1" role="dialog" aria-labelledby="modalBuscarCuentaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalBuscarCuentaLabel">Cuentas contables</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table table-striped table-bordered" id="tablaCuentas">
+                <thead>
+                  <tr>
+                    <th>Cuenta</th>
+                    <th>Detalle</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Cuenta</th>
+                    <th>Detalle</th>
+                    <th></th>
+                  </tr>
+                </tfoot>
+              </table><br/>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js"></script>
+    <script src="../js/owner/RW-004-b.js" text="javascript"></script>
+  </body>
+</html>
