@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
+  <!--script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')-->
+  <script src="../js/jquery-3.2.1.min.js" text="javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="../js/datatables/jquery.dataTables.min.js" text="javascript"></script>
+  <script src="../js/datatables/dataTables.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/dataTables.responsive.min.js" text="javascript"></script>
+  <script src="../js/datatables/responsive.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/autoFill.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/buttons.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/validaciones/jquery.validate.min.js" text="javascript"></script>
+  <script src="../js/validaciones/additional-methods.min.js" text="javascript"></script>
+  <link rel="stylesheet" href="../style/datatables/dataTables.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/buttons.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../fonts/google/material-icons.css"/>
+  <link rel="stylesheet" href="../style/datatables/autoFill.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/colReorder.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/fixedColumns.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/fixedHeader.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/keyTable.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/responsive.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/rowGroup.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/rowReorder.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/scroller.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/select.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/dt.css"/>
+  <title>Reportes</title>
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded bg-dark">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#">Cuentas pendientes</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link disabled" href="#"> <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"> </a></li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <label style="margin-right: 15px ;">Jorge Luis</label>
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Cerrar sesión</button>
+      </div>
+    </div>
+  </nav>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6"><br/>
+          <div class="form">
+            <div class="card card-inverse card-info text-center">
+              <div class="card-block">
+                <h5>Registro de usuario</h5>
+                <div class="form-group">
+                  <label for="txtEmail">Correo Electrónico</label>
+                  <input class="form-control" id="txtEmail" type="email" placeholder="name@example.com"/>
+                </div>
+                <div class="form-group">
+                  <label for="txtConfirmarEmail">Confirmar correo Electrónico</label>
+                  <input class="form-control" id="txtConfirmarEmail" type="email" placeholder="name@example.com"/>
+                </div>
+                <div class="form-group">
+                  <label for="txtPassword">Contraseña</label>
+                  <input class="form-control" id="txtPassword" type="password"/>
+                </div>
+                <div class="form-group">
+                  <label for="txtConfirmarPassword">Confirmar contraseña</label>
+                  <input class="form-control" id="txtConfirmarPassword" type="password"/>
+                </div>
+                <div class="form-group">
+                  <label for="txtNombre">Nombre(s)</label>
+                  <input class="form-control" id="txtNombre"/>
+                </div>
+                <div class="form-group">
+                  <label for="txtApellidos">Apellidos</label>
+                  <input class="form-control" id="txtApellidos"/>
+                </div>
+                <div class="form-group">
+                  <label for="txtRUC">RUC</label>
+                  <input class="form-control" id="txtRUC"/>
+                </div>
+                <div class="form-group">
+                  <label for="fileImagenEmpresa">Imagen de empresa</label>
+                  <input class="form-control-file" id="fileImagenEmpresa" type="file"/>
+                </div>
+                <div class="form-group">
+                  <label for="fileImagenPerfil">Imagen de perfil</label>
+                  <input class="form-control-file" id="fileImagenPerfil" type="file"/>
+                </div>
+                <div class="form-group">
+                  <label for="lstRol">Rol</label>
+                  <select class="form-control" id="lstRol">
+                    <option>Administrador</option>
+                    <option>Contador</option>
+                    <option>Asistente</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary btn-block" type="button">Registrar                                               </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6"><br/><br/><br/><img src="../images/brothercito-right.png" alt=""/></div>
+      </div>
+    </div>
+  </body>
+</html>

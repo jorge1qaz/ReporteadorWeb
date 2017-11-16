@@ -1,0 +1,105 @@
+.form#Formulario(action="javascript: void(0)")
+    .container
+        .row
+            .col-md-2
+                br
+                .card.card-inverse.card-info.text-center
+                    .card-block
+                        .form-group
+                            label(for='lstEmpresas') Tipo de moneda
+                            select#lstEmpresas.form-control
+                                option(value='', disabled='', selected='') Seleccione
+                                option(value='0') Dolares
+                                option(value='1') Nuevos soles
+                        .form-group
+                            label(for='exampleSelect1') Mes de proceso
+                            select#optMes.form-control
+                                option(value='', disabled='', selected='') Seleccione
+                                option(value='0') Apertura
+                                option(value='1') Enero
+                                option(value='2') Febrero
+                                option(value='3') Marzo
+                                option(value='4') Abril
+                                option(value='5') Mayo
+                                option(value='6') Junio
+                                option(value='7') Julio
+                                option(value='8') Agosto
+                                option(value='9') Septiembre
+                                option(value='10') Octubre
+                                option(value='11') Noviembre
+                                option(value='12') Diciembre
+                        .form-group
+                            label Año de proceso
+                            select.form-control#lstAnios
+                                option(value='', disabled='', selected='') Seleccione
+                                option(value='3') 2016
+                        .form-group
+                            button.btn.btn-success.form-control#btnPruebas(type="submit") Generar reporte
+                                //i.material-icons.left show_chart
+            .col-md-10
+                br
+                .row
+                    .col-md-12
+                        .card.card-outline-secondary.text-center
+                            .card-block
+                                h4.card-title Reporte de Margen de utilidad
+                                .row
+                                    .col-md-12.col-xs-10
+                                        table#tablaReporte.table.table-striped.table-bordered.display.table-responsive
+                                            thead
+                                                tr
+                                                    th Codigo
+                                                    th Descripcion
+                                                    th Medida
+                                                    th Unidades
+                                                    th Precio Venta
+                                                    th Precio Costo
+                                                    th Margen Utilidad Unitario
+                                                    th Porcentaje Margen Utilidad
+                                                    th MontoVentas
+                                                    th MontoCosto
+                                                    th MargenUtil
+                                            tfoot
+                                                tr
+                                                    th.center Codigo
+                                                    th.center Descripcion
+                                                    th.center Medida
+                                                    th.center Unidades
+                                                    th.center PrecioVenta
+                                                    th.center PrecioCosto
+                                                    th.center Margen Utilidad Unitario
+                                                    th.center Porcentaje Margen Utilidad
+                                                    th.center MontoVentas
+                                                    th.center MontoCosto
+                                                    th.center MargenUtil
+                                    
+    #modalBuscarCuenta.modal.fade.bd-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='modalBuscarCuentaLabel', aria-hidden='true')
+        .modal-dialog.modal-lg(role='document')
+            .modal-content
+                .modal-header
+                    h5#modalBuscarCuentaLabel.modal-title Cuentas contables
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body
+                    table#tablaCuentas.table.table-striped.table-bordered
+                        thead
+                            tr
+                                th Cuenta
+                                th Detalle
+                                th
+                        tfoot
+                            tr
+                                th Cuenta
+                                th Detalle
+                                th
+                    br
+                .modal-footer
+                    button.btn.btn-secondary(type='button', data-dismiss='modal') Cerrar
+script(src='https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.min.js')
+script(src='https://cdn.datatables.net/buttons/1.4.2/js/buttons.flash.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js')
+script(src='https://cdn.datatables.net/buttons/1.4.2/js/buttons.html5.min.js')
+script(src='https://cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js')
+script(src="../js/owner/RW-006.js" text='javascript')

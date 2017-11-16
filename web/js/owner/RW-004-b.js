@@ -13,12 +13,12 @@ $(document).ready(function() {
             $('#modalBuscarCuenta').modal('hide');
         });
     });
-
     listarCuentas();
-    $(".buttons-html5").addClass("btn blue lighten-1");
-    $(".buttons-print").addClass("btn blue lighten-1");
+    $(".buttons-html5").addClass("btn btn-primary");
+    $(".buttons-print").addClass("btn btn-primary");
     $(".buttons-copy span:first").text("Copiar");
     $(".buttons-print span:first").text("Imprimir");
+});
 
     //Validaciones
     var formulario = $("#Formulario");
@@ -57,7 +57,7 @@ $(document).ready(function() {
             $(element).parents(".form-group").addClass("text-sucess").removeClass("text-danger");
         }
     });
-});
+
     var $idMesProceso = 12;
     function GenerarReporte() {
         listarReporte($("#txtCuenta").val(), $idMesProceso);
@@ -123,11 +123,13 @@ $(document).ready(function() {
     $("#btnPruebas").on("click", function() {
         GenerarReporte();
     });
-
+    var idEmpresa = "01";
+    var idAnio = "2016";
+    var idCliente = "jricra@contasis.net";
     var listarReporte = function(idCuenta, idMesProceso) {
         var tblReportes = $('#tablaReporte').DataTable( {
             "destroy":true,
-            "ajax":"../js/data/" + idCuenta +"ReporteCP" + idMesProceso  + ".json",
+            "ajax":"../js/data/" + idCliente + "/" + "rptCntsPndts/"+ idEmpresa + "/" + idAnio + "/" +  idCuenta +"ReporteCP" + idMesProceso  + ".json",
             "columns": [
                 { "data": "ccod_cli" },
                 { "data": "sum_ndebe" },

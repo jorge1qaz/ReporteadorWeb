@@ -18,7 +18,7 @@ $(document).ready(function() {
     listarCuentas();
     $(".buttons-html5").addClass("btn blue lighten-1");
     $(".buttons-print").addClass("btn blue lighten-1");
-    $(".buttons-copy span:first").text("Copiar");
+    $(".buttons-copy span:first").text("Copiar esto");
     $(".buttons-print span:first").text("Imprimir");
 });
     var $idMesProceso = 12;

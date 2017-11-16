@@ -1,17 +1,15 @@
-nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+nav.navbar.navbar-toggleable-md.navbar-light.bg-faded.bg-dark
     button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
         span.navbar-toggler-icon
-    a.navbar-brand(href='#') Navbar
+    a.navbar-brand(href='#') Cuentas pendientes
     #navbarSupportedContent.collapse.navbar-collapse
         ul.navbar-nav.mr-auto
             li.nav-item.active
-                a.nav-link(href='#')
-                    | Home 
+                a.nav-link.disabled(href='#')
+                    |  
                     span.sr-only (current)
             li.nav-item
-                a.nav-link(href='#') Link
-            li.nav-item
-                a.nav-link.disabled(href='#') Disabled
-        form.form-inline.my-2.my-lg-0
-            input.form-control.mr-sm-2(type='text', placeholder='Search')
-            button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+                a.nav-link(href='#') 
+        .form-inline.my-2.my-lg-0
+            label(style="margin-right: 15px ") Jorge Luis
+            button.btn.btn-outline-info.my-2.my-sm-0(type='submit') Cerrar sesión

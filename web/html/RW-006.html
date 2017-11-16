@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
+  <!--script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')-->
+  <script src="../js/jquery-3.2.1.min.js" text="javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="../js/datatables/jquery.dataTables.min.js" text="javascript"></script>
+  <script src="../js/datatables/dataTables.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/dataTables.responsive.min.js" text="javascript"></script>
+  <script src="../js/datatables/responsive.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/autoFill.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/buttons.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/validaciones/jquery.validate.min.js" text="javascript"></script>
+  <script src="../js/validaciones/additional-methods.min.js" text="javascript"></script>
+  <link rel="stylesheet" href="../style/datatables/dataTables.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/buttons.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../fonts/google/material-icons.css"/>
+  <link rel="stylesheet" href="../style/datatables/autoFill.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/colReorder.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/fixedColumns.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/fixedHeader.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/keyTable.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/responsive.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/rowGroup.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/rowReorder.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/scroller.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/select.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/dt.css"/>
+  <title>Reportes</title>
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded bg-dark">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#">Cuentas pendientes</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link disabled" href="#"> <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"> </a></li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <label style="margin-right: 15px ;">Jorge Luis</label>
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Cerrar sesión</button>
+      </div>
+    </div>
+  </nav>
+  <body>
+    <div class="form" id="Formulario" action="javascript: void(0)">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2"><br/>
+            <div class="card card-inverse card-info text-center">
+              <div class="card-block">
+                <div class="form-group">
+                  <label for="lstEmpresas">Tipo de moneda</label>
+                  <select class="form-control" id="lstEmpresas">
+                    <option value="" disabled="" selected="">Seleccione</option>
+                    <option value="0">Dolares</option>
+                    <option value="1">Nuevos soles</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleSelect1">Mes de proceso</label>
+                  <select class="form-control" id="optMes">
+                    <option value="" disabled="" selected="">Seleccione</option>
+                    <option value="0">Apertura</option>
+                    <option value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Año de proceso</label>
+                  <select class="form-control" id="lstAnios">
+                    <option value="" disabled="" selected="">Seleccione</option>
+                    <option value="3">2016</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-success form-control" id="btnPruebas" type="submit">Generar reporte
+                    <!--i.material-icons.left show_chart-->
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-10"><br/>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card card-outline-secondary text-center">
+                  <div class="card-block">
+                    <h4 class="card-title">Reporte de Margen de utilidad</h4>
+                    <div class="row">
+                      <div class="col-md-12 col-xs-10">
+                        <table class="table table-striped table-bordered display table-responsive" id="tablaReporte">
+                          <thead>
+                            <tr>
+                              <th>Codigo</th>
+                              <th>Descripcion</th>
+                              <th>Medida</th>
+                              <th>Unidades</th>
+                              <th>Precio Venta</th>
+                              <th>Precio Costo</th>
+                              <th>Margen Utilidad Unitario</th>
+                              <th>Porcentaje Margen Utilidad</th>
+                              <th>MontoVentas</th>
+                              <th>MontoCosto</th>
+                              <th>MargenUtil</th>
+                            </tr>
+                          </thead>
+                          <tfoot>
+                            <tr>
+                              <th class="center">Codigo</th>
+                              <th class="center">Descripcion</th>
+                              <th class="center">Medida</th>
+                              <th class="center">Unidades</th>
+                              <th class="center">PrecioVenta</th>
+                              <th class="center">PrecioCosto</th>
+                              <th class="center">Margen Utilidad Unitario</th>
+                              <th class="center">Porcentaje Margen Utilidad</th>
+                              <th class="center">MontoVentas</th>
+                              <th class="center">MontoCosto</th>
+                              <th class="center">MargenUtil</th>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade bd-example-modal-lg" id="modalBuscarCuenta" tabindex="-1" role="dialog" aria-labelledby="modalBuscarCuentaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalBuscarCuentaLabel">Cuentas contables</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table table-striped table-bordered" id="tablaCuentas">
+                <thead>
+                  <tr>
+                    <th>Cuenta</th>
+                    <th>Detalle</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Cuenta</th>
+                    <th>Detalle</th>
+                    <th></th>
+                  </tr>
+                </tfoot>
+              </table><br/>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.4.2/js/buttons.print.min.js"></script>
+    <script src="../js/owner/RW-006.js" text="javascript"></script>
+  </body>
+</html>
