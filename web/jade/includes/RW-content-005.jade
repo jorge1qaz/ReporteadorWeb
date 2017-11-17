@@ -1,48 +1,59 @@
 .container
     .row
-        .col-md-6
+        .offset-md-1.offset-sm-0.col-md-10.col-sm-12
             br
-            .form
+            form#Formulario
                 .card.card-inverse.card-info.text-center
                     .card-block
                         h5 Registro de usuario
+                        .row
+                            .col-md-6.col-sm-12
+                                .form-group
+                                    label(for='txtEmail') Correo Electrónico
+                                    input#txtEmail.form-control(type='email', name="txtEmail" placeholder='Ingrese su correo electrónico')
+                            .col-md-6.col-sm-12
+                                .form-group
+                                    label(for='txtConfirmarEmail') Confirmar correo Electrónico
+                                    input#txtConfirmarEmail.form-control(type='email', name="txtConfirmarEmail", placeholder='Vuelva a ingresar su correo electrónico')
+                        .row
+                            .col-md-6.col-sm-12
+                                .form-group
+                                    label(for='txtPassword') Contraseña
+                                    input#txtPassword.form-control(type='password', name="txtPassword") 
+                            .col-md-6.col-sm-12        
+                                .form-group
+                                    label(for='txtConfirmarPassword') Confirmar contraseña
+                                    input#txtConfirmarPassword.form-control(type='password', name="txtConfirmarPassword")  
+                        .row
+                            .col-md-6.col-sm-12
+                                .form-group
+                                    label(for='txtNombre') Nombre(s)
+                                    input#txtNombre.form-control(name="txtNombre")
+                            .col-md-6.col-sm-12 
+                                .form-group
+                                    label(for='txtApellidos') Apellidos
+                                    input#txtApellidos.form-control(name="txtApellidos")
+                        .row
+                            .col-md-6.col-sm-12
+                                .form-group
+                                    label(for='txtRUC') RUC
+                                    input#txtRUC.form-control(name="txtRUC")
+                            .col-md-6.col-sm-12
+                                .form-group
+                                    label(for='lstRol') Rol
+                                    select#lstRol.form-control
+                                        option Administrador
+                                        option Contador
+                                        option Asistente
+                        .row
+                            .col-md-6.col-sm-12
+                                .form-group
+                                    label(for='fileImagenEmpresa') Imagen de empresa
+                                    input#fileImagenEmpresa.form-control-file(type='file')
+                            .col-md-6.col-sm-12
+                                .form-group
+                                    label(for='fileImagenPerfil') Imagen de perfil
+                                    input#fileImagenPerfil.form-control-file(type='file')
                         .form-group
-                            label(for='txtEmail') Correo Electrónico
-                            input#txtEmail.form-control(type='email', placeholder='name@example.com')
-                        .form-group
-                            label(for='txtConfirmarEmail') Confirmar correo Electrónico
-                            input#txtConfirmarEmail.form-control(type='email', placeholder='name@example.com')
-                        .form-group
-                            label(for='txtPassword') Contraseña
-                            input#txtPassword.form-control(type='password') 
-                        .form-group
-                            label(for='txtConfirmarPassword') Confirmar contraseña
-                            input#txtConfirmarPassword.form-control(type='password')  
-                        .form-group
-                            label(for='txtNombre') Nombre(s)
-                            input#txtNombre.form-control
-                        .form-group
-                            label(for='txtApellidos') Apellidos
-                            input#txtApellidos.form-control
-                        .form-group
-                            label(for='txtRUC') RUC
-                            input#txtRUC.form-control
-                        .form-group
-                            label(for='fileImagenEmpresa') Imagen de empresa
-                            input#fileImagenEmpresa.form-control-file(type='file')
-                        .form-group
-                            label(for='fileImagenPerfil') Imagen de perfil
-                            input#fileImagenPerfil.form-control-file(type='file')
-                        .form-group
-                            label(for='lstRol') Rol
-                            select#lstRol.form-control
-                                option Administrador
-                                option Contador
-                                option Asistente
-                        .form-group
-                            button.btn.btn-primary.btn-block(type='button') Registrar                                               
-        .col-md-6
-            br
-            br
-            br
-            img(src="../images/brothercito-right.png", alt="")
+                            button.btn.btn-primary.btn-block(type='submit') Registrar
+script(src="../js/owner/RW-005.js" text='javascript')

@@ -47,64 +47,94 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-md-6"><br/>
-          <div class="form">
+        <div class="offset-md-1 offset-sm-0 col-md-10 col-sm-12"><br/>
+          <form id="Formulario">
             <div class="card card-inverse card-info text-center">
               <div class="card-block">
                 <h5>Registro de usuario</h5>
-                <div class="form-group">
-                  <label for="txtEmail">Correo Electrónico</label>
-                  <input class="form-control" id="txtEmail" type="email" placeholder="name@example.com"/>
+                <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="txtEmail">Correo Electrónico</label>
+                      <input class="form-control" id="txtEmail" type="email" name="txtEmail" placeholder="Ingrese su correo electrónico"/>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="txtConfirmarEmail">Confirmar correo Electrónico</label>
+                      <input class="form-control" id="txtConfirmarEmail" type="email" name="txtConfirmarEmail" placeholder="Vuelva a ingresar su correo electrónico"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="txtPassword">Contraseña</label>
+                      <input class="form-control" id="txtPassword" type="password" name="txtPassword"/>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">       
+                    <div class="form-group">
+                      <label for="txtConfirmarPassword">Confirmar contraseña</label>
+                      <input class="form-control" id="txtConfirmarPassword" type="password" name="txtConfirmarPassword"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="txtNombre">Nombre(s)</label>
+                      <input class="form-control" id="txtNombre" name="txtNombre"/>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12"> 
+                    <div class="form-group">
+                      <label for="txtApellidos">Apellidos</label>
+                      <input class="form-control" id="txtApellidos" name="txtApellidos"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="txtRUC">RUC</label>
+                      <input class="form-control" id="txtRUC" name="txtRUC"/>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="lstRol">Rol</label>
+                      <select class="form-control" id="lstRol">
+                        <option>Administrador</option>
+                        <option>Contador</option>
+                        <option>Asistente</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="fileImagenEmpresa">Imagen de empresa</label>
+                      <input class="form-control-file" id="fileImagenEmpresa" type="file"/>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="fileImagenPerfil">Imagen de perfil</label>
+                      <input class="form-control-file" id="fileImagenPerfil" type="file"/>
+                    </div>
+                  </div>
                 </div>
                 <div class="form-group">
-                  <label for="txtConfirmarEmail">Confirmar correo Electrónico</label>
-                  <input class="form-control" id="txtConfirmarEmail" type="email" placeholder="name@example.com"/>
-                </div>
-                <div class="form-group">
-                  <label for="txtPassword">Contraseña</label>
-                  <input class="form-control" id="txtPassword" type="password"/>
-                </div>
-                <div class="form-group">
-                  <label for="txtConfirmarPassword">Confirmar contraseña</label>
-                  <input class="form-control" id="txtConfirmarPassword" type="password"/>
-                </div>
-                <div class="form-group">
-                  <label for="txtNombre">Nombre(s)</label>
-                  <input class="form-control" id="txtNombre"/>
-                </div>
-                <div class="form-group">
-                  <label for="txtApellidos">Apellidos</label>
-                  <input class="form-control" id="txtApellidos"/>
-                </div>
-                <div class="form-group">
-                  <label for="txtRUC">RUC</label>
-                  <input class="form-control" id="txtRUC"/>
-                </div>
-                <div class="form-group">
-                  <label for="fileImagenEmpresa">Imagen de empresa</label>
-                  <input class="form-control-file" id="fileImagenEmpresa" type="file"/>
-                </div>
-                <div class="form-group">
-                  <label for="fileImagenPerfil">Imagen de perfil</label>
-                  <input class="form-control-file" id="fileImagenPerfil" type="file"/>
-                </div>
-                <div class="form-group">
-                  <label for="lstRol">Rol</label>
-                  <select class="form-control" id="lstRol">
-                    <option>Administrador</option>
-                    <option>Contador</option>
-                    <option>Asistente</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <button class="btn btn-primary btn-block" type="button">Registrar                                               </button>
+                  <button class="btn btn-primary btn-block" type="submit">Registrar</button>
                 </div>
               </div>
             </div>
-          </div>
+          </form>
         </div>
-        <div class="col-md-6"><br/><br/><br/><img src="../images/brothercito-right.png" alt=""/></div>
       </div>
     </div>
+    <script src="../js/owner/RW-005.js" text="javascript"></script>
   </body>
 </html>
