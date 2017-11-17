@@ -46,22 +46,21 @@
   </nav>
   <body>
     <div class="form" id="Formulario" action="javascript: void(0)">
-      <div class="container">
+      <div class="container"><br/>
         <div class="row">
-          <div class="col-md-2"><br/>
+          <div class="col-md-3 col-sm-12">
             <div class="card card-inverse card-info text-center">
               <div class="card-block">
                 <div class="form-group">
                   <label for="lstEmpresas">Tipo de moneda</label>
-                  <select class="form-control" id="lstEmpresas">
-                    <option value="" disabled="" selected="">Seleccione</option>
-                    <option value="0">Dolares</option>
-                    <option value="1">Nuevos soles</option>
+                  <select class="form-control" id="lstTipoMoneda">
+                    <option value="Soles" selected="true">Nuevos soles</option>
+                    <option value="Dolares">Dolares</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="exampleSelect1">Mes de proceso</label>
-                  <select class="form-control" id="optMes">
+                  <select class="form-control" id="lstMes">
                     <option value="" disabled="" selected="">Seleccione</option>
                     <option value="0">Apertura</option>
                     <option value="1">Enero</option>
@@ -79,62 +78,51 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label>Año de proceso</label>
-                  <select class="form-control" id="lstAnios">
-                    <option value="" disabled="" selected="">Seleccione</option>
-                    <option value="3">2016</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <button class="btn btn-success form-control" id="btnPruebas" type="submit">Generar reporte
+                  <button class="btn btn-success form-control" id="btnGenerarReporte">Generar reporte
                     <!--i.material-icons.left show_chart-->
                   </button>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-10"><br/>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card card-outline-secondary text-center">
-                  <div class="card-block">
-                    <h4 class="card-title">Reporte de Margen de utilidad</h4>
-                    <div class="row">
-                      <div class="col-md-12 col-xs-10">
-                        <table class="table table-striped table-bordered display table-responsive" id="tablaReporte">
-                          <thead>
-                            <tr>
-                              <th>Codigo</th>
-                              <th>Descripcion</th>
-                              <th>Medida</th>
-                              <th>Unidades</th>
-                              <th>Precio Venta</th>
-                              <th>Precio Costo</th>
-                              <th>Margen Utilidad Unitario</th>
-                              <th>Porcentaje Margen Utilidad</th>
-                              <th>MontoVentas</th>
-                              <th>MontoCosto</th>
-                              <th>MargenUtil</th>
-                            </tr>
-                          </thead>
-                          <tfoot>
-                            <tr>
-                              <th class="center">Codigo</th>
-                              <th class="center">Descripcion</th>
-                              <th class="center">Medida</th>
-                              <th class="center">Unidades</th>
-                              <th class="center">PrecioVenta</th>
-                              <th class="center">PrecioCosto</th>
-                              <th class="center">Margen Utilidad Unitario</th>
-                              <th class="center">Porcentaje Margen Utilidad</th>
-                              <th class="center">MontoVentas</th>
-                              <th class="center">MontoCosto</th>
-                              <th class="center">MargenUtil</th>
-                            </tr>
-                          </tfoot>
-                        </table>
-                      </div>
-                    </div>
+          <div class="col-md-9 col-xs-12">
+            <div class="card card-outline-secondary text-center">
+              <div class="card-block">
+                <h4 class="card-title">Reporte de Margen de utilidad <span id="monthtitle">para el mes de </span><span id="monthHeader"></span></h4>
+                <div class="row">
+                  <div class="col-lg-11 col-md-10 col-xs-12">
+                    <table class="table table-striped table-bordered display table-responsive" id="tablaReporte">
+                      <thead>
+                        <tr>
+                          <th>Código</th>
+                          <th>Descripción</th>
+                          <th>Medida</th>
+                          <th>Unidades</th>
+                          <th>Precio venta</th>
+                          <th>Precio costo</th>
+                          <th>Margen de utilidad unitario</th>
+                          <th>Porcentaje de margen utilidad</th>
+                          <th>Monto de ventas</th>
+                          <th>Monto de costo</th>
+                          <th>Margen de utilidad</th>
+                        </tr>
+                      </thead>
+                      <tfoot>
+                        <tr>
+                          <th class="center">Código</th>
+                          <th class="center">Descripción</th>
+                          <th class="center">Medida</th>
+                          <th class="center">Unidades</th>
+                          <th class="center">Precio venta</th>
+                          <th class="center">Precio costo</th>
+                          <th class="center">Margen de utilidad unitario</th>
+                          <th class="center">Porcentaje de margen utilidad</th>
+                          <th class="center">Monto de ventas</th>
+                          <th class="center">Monto de costo</th>
+                          <th class="center">Margen de utilidad</th>
+                        </tr>
+                      </tfoot>
+                    </table>
                   </div>
                 </div>
               </div>

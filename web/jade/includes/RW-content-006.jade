@@ -1,19 +1,18 @@
 .form#Formulario(action="javascript: void(0)")
     .container
+        br
         .row
-            .col-md-2
-                br
+            .col-md-3.col-sm-12
                 .card.card-inverse.card-info.text-center
                     .card-block
                         .form-group
                             label(for='lstEmpresas') Tipo de moneda
-                            select#lstEmpresas.form-control
-                                option(value='', disabled='', selected='') Seleccione
-                                option(value='0') Dolares
-                                option(value='1') Nuevos soles
+                            select#lstTipoMoneda.form-control
+                                option(value='Soles' selected="true") Nuevos soles
+                                option(value='Dolares') Dolares
                         .form-group
                             label(for='exampleSelect1') Mes de proceso
-                            select#optMes.form-control
+                            select#lstMes.form-control
                                 option(value='', disabled='', selected='') Seleccione
                                 option(value='0') Apertura
                                 option(value='1') Enero
@@ -29,50 +28,44 @@
                                 option(value='11') Noviembre
                                 option(value='12') Diciembre
                         .form-group
-                            label Año de proceso
-                            select.form-control#lstAnios
-                                option(value='', disabled='', selected='') Seleccione
-                                option(value='3') 2016
-                        .form-group
-                            button.btn.btn-success.form-control#btnPruebas(type="submit") Generar reporte
+                            button.btn.btn-success.form-control#btnGenerarReporte Generar reporte
                                 //i.material-icons.left show_chart
-            .col-md-10
-                br
-                .row
-                    .col-md-12
-                        .card.card-outline-secondary.text-center
-                            .card-block
-                                h4.card-title Reporte de Margen de utilidad
-                                .row
-                                    .col-md-12.col-xs-10
-                                        table#tablaReporte.table.table-striped.table-bordered.display.table-responsive
-                                            thead
-                                                tr
-                                                    th Codigo
-                                                    th Descripcion
-                                                    th Medida
-                                                    th Unidades
-                                                    th Precio Venta
-                                                    th Precio Costo
-                                                    th Margen Utilidad Unitario
-                                                    th Porcentaje Margen Utilidad
-                                                    th MontoVentas
-                                                    th MontoCosto
-                                                    th MargenUtil
-                                            tfoot
-                                                tr
-                                                    th.center Codigo
-                                                    th.center Descripcion
-                                                    th.center Medida
-                                                    th.center Unidades
-                                                    th.center PrecioVenta
-                                                    th.center PrecioCosto
-                                                    th.center Margen Utilidad Unitario
-                                                    th.center Porcentaje Margen Utilidad
-                                                    th.center MontoVentas
-                                                    th.center MontoCosto
-                                                    th.center MargenUtil
-                                    
+            .col-md-9.col-xs-12
+                .card.card-outline-secondary.text-center
+                    .card-block
+                        h4.card-title Reporte de Margen de utilidad 
+                            span#monthtitle para el mes de 
+                            span#monthHeader
+                        .row
+                            .col-lg-11.col-md-10.col-xs-12
+                                table#tablaReporte.table.table-striped.table-bordered.display.table-responsive
+                                    thead
+                                        tr
+                                            th Código
+                                            th Descripción
+                                            th Medida
+                                            th Unidades
+                                            th Precio venta
+                                            th Precio costo
+                                            th Margen de utilidad unitario
+                                            th Porcentaje de margen utilidad
+                                            th Monto de ventas
+                                            th Monto de costo
+                                            th Margen de utilidad
+                                    tfoot
+                                        tr
+                                            th.center Código
+                                            th.center Descripción
+                                            th.center Medida
+                                            th.center Unidades
+                                            th.center Precio venta
+                                            th.center Precio costo
+                                            th.center Margen de utilidad unitario
+                                            th.center Porcentaje de margen utilidad
+                                            th.center Monto de ventas
+                                            th.center Monto de costo
+                                            th.center Margen de utilidad
+                            
     #modalBuscarCuenta.modal.fade.bd-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='modalBuscarCuentaLabel', aria-hidden='true')
         .modal-dialog.modal-lg(role='document')
             .modal-content
