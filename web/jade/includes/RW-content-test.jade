@@ -1,0 +1,15 @@
+#visualization(style='height: 400px; width: 400px;')
+script(type='text/javascript', src='https://www.gstatic.com/charts/loader.js')
+script(type='text/javascript').
+    google.charts.load('current');
+    google.charts.setOnLoadCallback(drawVisualization);
+    function drawVisualization() {
+        // Define the chart using setters:
+        var wrap = new google.visualization.ChartWrapper();
+        wrap.setChartType('LineChart');
+        wrap.setDataSourceUrl('http://spreadsheets.google.com/tq?key=pCQbetd-CptGXxxQIG7VFIQ&pub=1');
+        wrap.setContainerId('visualization');
+        wrap.setQuery('SELECT A,D WHERE D > 100 ORDER BY D');
+        wrap.setOptions({'title':'Population Density (people/km^2)', 'legend':'none'});
+        wrap.draw();
+    }

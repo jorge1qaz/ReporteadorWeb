@@ -1,0 +1,125 @@
+.offset-md-1.col-md-10.offset-sm-0.col-sm-12
+    br
+    .card.text-center
+        .card-header
+            ul.nav.nav-pills.nav-fill(role="tablist")
+                li.nav-item
+                    a.nav-link.active(data-toggle='tab', href='#navRPC', role="tab") Cuentas pendientes
+                li.nav-item
+                    a.nav-link(data-toggle='tab', href='#navRMU', role="tab") Margen de utilidad por producto
+        .card-block
+            h4.card-title Bienvenido al sistema de reportes web Contasis
+            p.card-text Seleccione
+            .row
+                .card.card-inverse.card-success.text-center
+                    .card-block
+                        p Hemos detectado una nueva actualización a sus datos correspondiente a la fecha 19/11/2017 18:00. Su última actualización fue 18/11/2017 12:00, La actualización a sus datos puede tardar varios segundos en terminar de ser procesados. ¿Desea actualizar sus datos?
+                        .row
+                            .offset-md-3.col-md-3.offset-sm-1.col-sm-5
+                                .d-flex.justify-content-center
+                                    button.btn.btn-danger.btn-block(role='button') No
+                            .offset-md-0.col-md-3.offset-sm-1.col-sm-5
+                                .d-flex.justify-content-center
+                                    button.btn.btn-info.btn-block Si                   
+            .row
+                .offset-md-2.col-md-8.offset-sm-0.col-sm-12
+                    .d-flex.justify-content-center
+                            .card
+                                .card-block
+                                    .tab-content
+                                        #navRPC.tab-pane.active(role="tabpanel")
+                                            table#tablaReporte.table.table-striped.table-bordered.display.table-responsive.dataTable.dtr-inline(role='grid', aria-describedby='tablaReporte_info')
+                                                thead
+                                                    tr(role='row')
+                                                        th.sorting_desc(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 8.01042px;', aria-label='a: Activar para ordenar la columna de manera ascendente', aria-sort='descending') a
+                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 94.0104px;', aria-label='b: Activar para ordenar la columna de manera ascendente') b
+                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 15.0104px;', aria-label='c: Activar para ordenar la columna de manera ascendente') c
+                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 75.0104px;', aria-label='d: Activar para ordenar la columna de manera ascendente') d
+                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 9px;', aria-label='e: Activar para ordenar la columna de manera ascendente') e
+                                                tfoot
+                                                    tr
+                                                        th(rowspan='1', colspan='1') a
+                                                        th(rowspan='1', colspan='1') b
+                                                        th(rowspan='1', colspan='1') c
+                                                        th(rowspan='1', colspan='1') d
+                                                        th(rowspan='1', colspan='1') e
+                                                tbody
+                                                    tr.odd(role='row')
+                                                        td.sorting_1(tabindex='0') ff
+                                                        td otraempresaaaa
+                                                        td 2017
+                                                        td fgdfgdfgdff
+                                                        td
+                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
+                                                    tr.even(role='row')
+                                                        td.sorting_1(tabindex='0') 02
+                                                        td miempresa
+                                                        td 2017
+                                                        td 34563453455
+                                                        td
+                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
+                                                    tr.odd(role='row')
+                                                        td.sorting_1(tabindex='0') 01
+                                                        td PRUEBAS
+                                                        td 2017
+                                                        td 12345678978
+                                                        td
+                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
+                                                    tr.even(role='row')
+                                                        td.sorting_1(tabindex='0') 01
+                                                        td PRUEBAS
+                                                        td 2016
+                                                        td 12345678978
+                                                        td
+                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
+                                        #navRMU.tab-pane(role="tabpanel")
+                                            table#tablaReporte.table.table-striped.table-bordered.display.table-responsive.dataTable.dtr-inline(role='grid', aria-describedby='tablaReporte_info')
+                                                thead
+                                                    tr(role='row')
+                                                        th.sorting_desc(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 8.01042px;', aria-label='a: Activar para ordenar la columna de manera ascendente', aria-sort='descending') a
+                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 94.0104px;', aria-label='b: Activar para ordenar la columna de manera ascendente') b
+                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 15.0104px;', aria-label='c: Activar para ordenar la columna de manera ascendente') c
+                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 75.0104px;', aria-label='d: Activar para ordenar la columna de manera ascendente') d
+                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 9px;', aria-label='e: Activar para ordenar la columna de manera ascendente') e
+                                                tfoot
+                                                    tr
+                                                        th(rowspan='1', colspan='1') a
+                                                        th(rowspan='1', colspan='1') b
+                                                        th(rowspan='1', colspan='1') c
+                                                        th(rowspan='1', colspan='1') d
+                                                        th(rowspan='1', colspan='1') e
+                                                tbody
+                                                    tr.odd(role='row')
+                                                        td.sorting_1(tabindex='0') ff
+                                                        td otraempresaaaa
+                                                        td 2017
+                                                        td fgdfgdfgdff
+                                                        td
+                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
+                                                    tr.even(role='row')
+                                                        td.sorting_1(tabindex='0') 02
+                                                        td miempresa
+                                                        td 2017
+                                                        td 34563453455
+                                                        td
+                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
+                                                    tr.odd(role='row')
+                                                        td.sorting_1(tabindex='0') 01
+                                                        td PRUEBAS
+                                                        td 2017
+                                                        td 12345678978
+                                                        td
+                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
+                                                    tr.even(role='row')
+                                                        td.sorting_1(tabindex='0') 01
+                                                        td PRUEBAS
+                                                        td 2016
+                                                        td 12345678978
+                                                        td
+                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
+script.
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+   
+                                
