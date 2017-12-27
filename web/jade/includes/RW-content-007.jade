@@ -2,16 +2,12 @@
     br
     .card.text-center
         .card-header
-            ul.nav.nav-pills.nav-fill(role="tablist")
-                li.nav-item
-                    a.nav-link.active(data-toggle='tab', href='#navRPC', role="tab") Cuentas pendientes
-                li.nav-item
-                    a.nav-link(data-toggle='tab', href='#navRMU', role="tab") Margen de utilidad por producto
+            h2.text-center Inicio
         .card-block
             h4.card-title Bienvenido al sistema de reportes web Contasis
             p.card-text Seleccione
             .row
-                .card.card-inverse.card-success.text-center
+                //.card.card-inverse.card-success.text-center
                     .card-block
                         p Hemos detectado una nueva actualización a sus datos correspondiente a la fecha 19/11/2017 18:00. Su última actualización fue 18/11/2017 12:00, La actualización a sus datos puede tardar varios segundos en terminar de ser procesados. ¿Desea actualizar sus datos?
                         .row
@@ -20,106 +16,120 @@
                                     button.btn.btn-danger.btn-block(role='button') No
                             .offset-md-0.col-md-3.offset-sm-1.col-sm-5
                                 .d-flex.justify-content-center
-                                    button.btn.btn-info.btn-block Si                   
+                                    button.btn.btn-info.btn-block Si
+                .col-md-4.col-sm-12#blockCuentasPendientes
+                    .card.card-outline-primary.text-center
+                        .card-block
+                            blockquote.card-blockquote
+                                p Cuentas pendientes
+                                br
+                                footer
+                                    button#btnCuentasPendientes.btn.btn-info(role='button') Ver detalles
+                .col-md-4.col-sm-12#blockMargenUtilidad
+                    .card.card-outline-primary.text-center
+                        .card-block
+                            blockquote.card-blockquote
+                                p Margen de utilidad por producto
+                                footer
+                                    button#btnMargenUtilidad.btn.btn-info(role='button') Ver detalles
+                .col-md-4.col-sm-12#blockMinegocioAlDia
+                    .card.card-outline-primary.text-center
+                        .card-block
+                            blockquote.card-blockquote
+                                p Mi negocio al día
+                                br
+                                footer
+                                    button#btnMinegocioAlDia.btn.btn-info(role='button') Ver detalles
+            br
             .row
-                .offset-md-2.col-md-8.offset-sm-0.col-sm-12
-                    .d-flex.justify-content-center
-                            .card
-                                .card-block
-                                    .tab-content
-                                        #navRPC.tab-pane.active(role="tabpanel")
-                                            table#tablaReporte.table.table-striped.table-bordered.display.table-responsive.dataTable.dtr-inline(role='grid', aria-describedby='tablaReporte_info')
-                                                thead
-                                                    tr(role='row')
-                                                        th.sorting_desc(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 8.01042px;', aria-label='a: Activar para ordenar la columna de manera ascendente', aria-sort='descending') a
-                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 94.0104px;', aria-label='b: Activar para ordenar la columna de manera ascendente') b
-                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 15.0104px;', aria-label='c: Activar para ordenar la columna de manera ascendente') c
-                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 75.0104px;', aria-label='d: Activar para ordenar la columna de manera ascendente') d
-                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 9px;', aria-label='e: Activar para ordenar la columna de manera ascendente') e
-                                                tfoot
-                                                    tr
-                                                        th(rowspan='1', colspan='1') a
-                                                        th(rowspan='1', colspan='1') b
-                                                        th(rowspan='1', colspan='1') c
-                                                        th(rowspan='1', colspan='1') d
-                                                        th(rowspan='1', colspan='1') e
-                                                tbody
-                                                    tr.odd(role='row')
-                                                        td.sorting_1(tabindex='0') ff
-                                                        td otraempresaaaa
-                                                        td 2017
-                                                        td fgdfgdfgdff
-                                                        td
-                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
-                                                    tr.even(role='row')
-                                                        td.sorting_1(tabindex='0') 02
-                                                        td miempresa
-                                                        td 2017
-                                                        td 34563453455
-                                                        td
-                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
-                                                    tr.odd(role='row')
-                                                        td.sorting_1(tabindex='0') 01
-                                                        td PRUEBAS
-                                                        td 2017
-                                                        td 12345678978
-                                                        td
-                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
-                                                    tr.even(role='row')
-                                                        td.sorting_1(tabindex='0') 01
-                                                        td PRUEBAS
-                                                        td 2016
-                                                        td 12345678978
-                                                        td
-                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
-                                        #navRMU.tab-pane(role="tabpanel")
-                                            table#tablaReporte.table.table-striped.table-bordered.display.table-responsive.dataTable.dtr-inline(role='grid', aria-describedby='tablaReporte_info')
-                                                thead
-                                                    tr(role='row')
-                                                        th.sorting_desc(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 8.01042px;', aria-label='a: Activar para ordenar la columna de manera ascendente', aria-sort='descending') a
-                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 94.0104px;', aria-label='b: Activar para ordenar la columna de manera ascendente') b
-                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 15.0104px;', aria-label='c: Activar para ordenar la columna de manera ascendente') c
-                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 75.0104px;', aria-label='d: Activar para ordenar la columna de manera ascendente') d
-                                                        th.sorting(tabindex='0', aria-controls='tablaReporte', rowspan='1', colspan='1', style='width: 9px;', aria-label='e: Activar para ordenar la columna de manera ascendente') e
-                                                tfoot
-                                                    tr
-                                                        th(rowspan='1', colspan='1') a
-                                                        th(rowspan='1', colspan='1') b
-                                                        th(rowspan='1', colspan='1') c
-                                                        th(rowspan='1', colspan='1') d
-                                                        th(rowspan='1', colspan='1') e
-                                                tbody
-                                                    tr.odd(role='row')
-                                                        td.sorting_1(tabindex='0') ff
-                                                        td otraempresaaaa
-                                                        td 2017
-                                                        td fgdfgdfgdff
-                                                        td
-                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
-                                                    tr.even(role='row')
-                                                        td.sorting_1(tabindex='0') 02
-                                                        td miempresa
-                                                        td 2017
-                                                        td 34563453455
-                                                        td
-                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
-                                                    tr.odd(role='row')
-                                                        td.sorting_1(tabindex='0') 01
-                                                        td PRUEBAS
-                                                        td 2017
-                                                        td 12345678978
-                                                        td
-                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
-                                                    tr.even(role='row')
-                                                        td.sorting_1(tabindex='0') 01
-                                                        td PRUEBAS
-                                                        td 2016
-                                                        td 12345678978
-                                                        td
-                                                            i.material-icons(data-toggle="tooltip" data-placement="right" title="Tooltip on right") check_circle
+                table#dataRCP.table.table-striped.table-bordered.table-responsive.dataTable.dtr-inline.collapsed(role='grid', aria-describedby='dataRCP_info', style='width: 413px; margin: auto; ')
+                    thead
+                        tr(role='row')
+                            th.sorting_desc(tabindex='0', aria-controls='dataRCP', rowspan='1', colspan='1', style='width: 117px;', aria-label='Código de empresa: Activar para ordenar la columna de manera ascendente', aria-sort='descending') Código de empresa
+                            th.sorting(tabindex='0', aria-controls='dataRCP', rowspan='1', colspan='1', style='width: 72px;', aria-label='Razón social: Activar para ordenar la columna de manera ascendente') Razón social
+                            th.sorting(tabindex='0', aria-controls='dataRCP', rowspan='1', colspan='1', style='width: 95px;', aria-label='Año de proceso: Activar para ordenar la columna de manera ascendente') Año de proceso
+                            th.sorting(tabindex='0', aria-controls='dataRCP', rowspan='1', colspan='1', style='width: 0px; display: none;', aria-label='RUC: Activar para ordenar la columna de manera ascendente') RUC
+                            th.sorting(tabindex='0', aria-controls='dataRCP', rowspan='1', colspan='1', style='width: 0px; display: none;', aria-label='Seleccione: Activar para ordenar la columna de manera ascendente') Seleccione
+                    tfoot
+                        tr
+                            th(rowspan='1', colspan='1') Código de empresa
+                            th(rowspan='1', colspan='1') Razón social
+                            th(rowspan='1', colspan='1') Año de proceso
+                            th(rowspan='1', colspan='1', style='display: none;') RUC
+                            th(rowspan='1', colspan='1', style='display: none;') Seleccione
+                    tbody
+                        tr.odd(role='row')
+                            td.sorting_1(tabindex='0') 01
+                            td PRUEBAS
+                            td 2016
+                            td(style='display: none;') 12345678978
+                            td(style='display: none;')
+                                i#linkRCP.material-icons(onclick='redireccionarRCP()', role='button', data-toggle='tooltip', data-placement='right', title='Seleccione') check_circle
+                        tr.even(role='row')
+                            td.sorting_1(tabindex='0') 01
+                            td PRUEBAS
+                            td 2017
+                            td(style='display: none;') 12345678978
+                            td(style='display: none;')
+                                i#linkRCP.material-icons(onclick='redireccionarRCP()', role='button', data-toggle='tooltip', data-placement='right', title='Seleccione') check_circle
+
+
+
 script.
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
+        var statusRCP = 0;
+        var statusRMUP = 0;
+        var statusRMNA = 0;
+        $("#dataRCP").toggle("slow");
+        $("#btnCuentasPendientes").on("click", function () {
+            if(statusRCP == 0) {
+                $("#btnCuentasPendientes").text("Ocultar detalles");
+                $("#blockCuentasPendientes").removeClass("col-md-4").addClass("col-md-12");
+                $("#blockMargenUtilidad").hide("200");
+                $("#blockMinegocioAlDia").hide("200");
+                statusRCP = 1;
+            } else {
+                $("#btnCuentasPendientes").text("Ver detalles");
+                $("#blockCuentasPendientes").removeClass("col-md-12").addClass("col-md-4");
+                $("#blockMargenUtilidad").show("200");
+                $("#blockMinegocioAlDia").show("200");
+                statusRCP = 0;
+            }
+            $("#dataRCP").toggle("slow");
+        });
+        $("#btnMargenUtilidad").on("click", function () {
+            if(statusRMUP == 0) {
+                $("#btnMargenUtilidad").text("Ocultar detalles");
+                $("#blockMargenUtilidad").removeClass("col-md-4").addClass("col-md-12");
+                $("#blockCuentasPendientes").hide("200");
+                $("#blockMinegocioAlDia").hide("200");
+                statusRMUP = 1;
+            } else {
+                $("#btnMargenUtilidad").text("Ver detalles");
+                $("#blockMargenUtilidad").removeClass("col-md-12").addClass("col-md-4");
+                $("#blockCuentasPendientes").show("200");
+                $("#blockMinegocioAlDia").show("200");
+                statusRMUP = 0;
+            }
+            $("#dataRCP").toggle("slow");
+        });
+        $("#btnMinegocioAlDia").on("click", function () {
+            if(statusRMNA == 0) {
+                $("#btnMinegocioAlDia").text("Ocultar detalles");
+                $("#blockMinegocioAlDia").removeClass("col-md-4").addClass("col-md-12");
+                $("#blockCuentasPendientes").hide("200");
+                $("#blockMargenUtilidad").hide("200");
+                statusRMNA = 1;
+            } else {
+                $("#btnMinegocioAlDia").text("Ver detalles");
+                $("#blockMinegocioAlDia").removeClass("col-md-12").addClass("col-md-4");
+                $("#blockCuentasPendientes").show("200");
+                $("#blockMargenUtilidad").show("200");
+                statusRMNA = 0;
+            }
+            $("#dataRCP").toggle("slow");
+        });
     });
    
                                 
