@@ -45,7 +45,7 @@
     </div>
   </nav>
   <body>
-    <div class="offset-md-1 col-md-10 offset-sm-0 col-sm-12"><br/>
+    <div class="container"><br/>
       <div class="card text-center">
         <div class="card-header">
           <h2 class="text-center">Inicio</h2>
@@ -66,10 +66,43 @@
                             button.btn.btn-info.btn-block Si
             -->
             <div class="col-md-4 col-sm-12" id="blockCuentasPendientes">
-              <div class="card card-outline-primary text-center">
+              <div class="card card-outline-secondary text-center">
                 <div class="card-block">
                   <blockquote class="card-blockquote">
-                    <p>Cuentas pendientes</p><br/>
+                    <p>Cuentas pendientes</p>
+                    <div class="row">
+                      <div class="col-md-8 offset-md-2 col-sm-12 offset-md-0">
+                        <div id="blockCompanyDetailsForRCP">
+                          <table class="table table-striped table-bordered table-responsive">
+                            <thead>
+                              <tr>
+                                <th>Seleccione</th>
+                                <th>Año de proceso</th>
+                                <th>Código de empresa</th>
+                                <th>Razón social</th>
+                                <th>RUC</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <button class="btn btn-success">Seleccione</button>
+                                </td>
+                                <td>
+                                  <select class="custom-select" id="lstAnio" name="lst">
+                                    <option value="2017">2017</option>
+                                    <option value="2017">2016</option>
+                                  </select>
+                                </td>
+                                <td><span>01</span></td>
+                                <td><span>PRUEBAS</span></td>
+                                <td><span>12345678910</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
                     <footer>
                       <button class="btn btn-info" id="btnCuentasPendientes" role="button">Ver detalles</button>
                     </footer>
@@ -78,10 +111,43 @@
               </div>
             </div>
             <div class="col-md-4 col-sm-12" id="blockMargenUtilidad">
-              <div class="card card-outline-primary text-center">
+              <div class="card card-outline-success text-center">
                 <div class="card-block">
                   <blockquote class="card-blockquote">
                     <p>Margen de utilidad por producto</p>
+                    <div class="row">
+                      <div class="col-md-8 offset-md-2 col-sm-12 offset-md-0">
+                        <div id="blockCompanyDetailsForRMU">
+                          <table class="table table-striped table-bordered table-responsive">
+                            <thead>
+                              <tr>
+                                <th>Seleccione</th>
+                                <th>Año de proceso</th>
+                                <th>Código de empresa</th>
+                                <th>Razón social</th>
+                                <th>RUC</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <button class="btn btn-success">Seleccione</button>
+                                </td>
+                                <td>
+                                  <select class="custom-select" id="lstAnio" name="lst">
+                                    <option value="2017">2017</option>
+                                    <option value="2017">2016</option>
+                                  </select>
+                                </td>
+                                <td><span>01</span></td>
+                                <td><span>PRUEBAS</span></td>
+                                <td><span>12345678910</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
                     <footer>
                       <button class="btn btn-info" id="btnMargenUtilidad" role="button">Ver detalles</button>
                     </footer>
@@ -90,10 +156,43 @@
               </div>
             </div>
             <div class="col-md-4 col-sm-12" id="blockMinegocioAlDia">
-              <div class="card card-outline-primary text-center">
+              <div class="card card-outline-info text-center">
                 <div class="card-block">
                   <blockquote class="card-blockquote">
-                    <p>Mi negocio al día</p><br/>
+                    <p>Mi negocio al día</p>
+                    <div class="row">
+                      <div class="col-md-8 offset-md-2 col-sm-12 offset-md-0">
+                        <div id="blockCompanyDetailsForRMND">
+                          <table class="table table-striped table-bordered table-responsive">
+                            <thead>
+                              <tr>
+                                <th>Seleccione</th>
+                                <th>Año de proceso</th>
+                                <th>Código de empresa</th>
+                                <th>Razón social</th>
+                                <th>RUC</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <button class="btn btn-success">Seleccione</button>
+                                </td>
+                                <td>
+                                  <select class="custom-select" id="lstAnio" name="lst">
+                                    <option value="2017">2017</option>
+                                    <option value="2017">2016</option>
+                                  </select>
+                                </td>
+                                <td><span>01</span></td>
+                                <td><span>PRUEBAS</span></td>
+                                <td><span>12345678910</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
                     <footer>
                       <button class="btn btn-info" id="btnMinegocioAlDia" role="button">Ver detalles</button>
                     </footer>
@@ -101,44 +200,6 @@
                 </div>
               </div>
             </div>
-          </div><br/>
-          <div class="row">
-            <table class="table table-striped table-bordered table-responsive dataTable dtr-inline collapsed" id="dataRCP" role="grid" aria-describedby="dataRCP_info" style="width: 413px; margin: auto; ;">
-              <thead>
-                <tr role="row">
-                  <th class="sorting_desc" tabindex="0" aria-controls="dataRCP" rowspan="1" colspan="1" style="width: 117px;" aria-label="Código de empresa: Activar para ordenar la columna de manera ascendente" aria-sort="descending">Código de empresa</th>
-                  <th class="sorting" tabindex="0" aria-controls="dataRCP" rowspan="1" colspan="1" style="width: 72px;" aria-label="Razón social: Activar para ordenar la columna de manera ascendente">Razón social</th>
-                  <th class="sorting" tabindex="0" aria-controls="dataRCP" rowspan="1" colspan="1" style="width: 95px;" aria-label="Año de proceso: Activar para ordenar la columna de manera ascendente">Año de proceso</th>
-                  <th class="sorting" tabindex="0" aria-controls="dataRCP" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="RUC: Activar para ordenar la columna de manera ascendente">RUC</th>
-                  <th class="sorting" tabindex="0" aria-controls="dataRCP" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Seleccione: Activar para ordenar la columna de manera ascendente">Seleccione</th>
-                </tr>
-              </thead>
-              <tfoot>
-                <tr>
-                  <th rowspan="1" colspan="1">Código de empresa</th>
-                  <th rowspan="1" colspan="1">Razón social</th>
-                  <th rowspan="1" colspan="1">Año de proceso</th>
-                  <th rowspan="1" colspan="1" style="display: none;">RUC</th>
-                  <th rowspan="1" colspan="1" style="display: none;">Seleccione</th>
-                </tr>
-              </tfoot>
-              <tbody>
-                <tr class="odd" role="row">
-                  <td class="sorting_1" tabindex="0">01</td>
-                  <td>PRUEBAS</td>
-                  <td>2016</td>
-                  <td style="display: none;">12345678978</td>
-                  <td style="display: none;"><i class="material-icons" id="linkRCP" onclick="redireccionarRCP()" role="button" data-toggle="tooltip" data-placement="right" title="Seleccione">check_circle</i></td>
-                </tr>
-                <tr class="even" role="row">
-                  <td class="sorting_1" tabindex="0">01</td>
-                  <td>PRUEBAS</td>
-                  <td>2017</td>
-                  <td style="display: none;">12345678978</td>
-                  <td style="display: none;"><i class="material-icons" id="linkRCP" onclick="redireccionarRCP()" role="button" data-toggle="tooltip" data-placement="right" title="Seleccione">check_circle</i></td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </div>
@@ -149,7 +210,9 @@
           var statusRCP = 0;
           var statusRMUP = 0;
           var statusRMNA = 0;
-          $("#dataRCP").toggle("slow");
+          $("#blockCompanyDetailsForRCP").toggle();
+          $("#blockCompanyDetailsForRMU").toggle();
+          $("#blockCompanyDetailsForRMND").toggle();
           $("#btnCuentasPendientes").on("click", function () {
               if(statusRCP == 0) {
                   $("#btnCuentasPendientes").text("Ocultar detalles");
@@ -164,7 +227,7 @@
                   $("#blockMinegocioAlDia").show("200");
                   statusRCP = 0;
               }
-              $("#dataRCP").toggle("slow");
+              $("#blockCompanyDetailsForRCP").toggle("slow");
           });
           $("#btnMargenUtilidad").on("click", function () {
               if(statusRMUP == 0) {
@@ -180,7 +243,7 @@
                   $("#blockMinegocioAlDia").show("200");
                   statusRMUP = 0;
               }
-              $("#dataRCP").toggle("slow");
+              $("#blockCompanyDetailsForRMU").toggle("slow");
           });
           $("#btnMinegocioAlDia").on("click", function () {
               if(statusRMNA == 0) {
@@ -196,7 +259,7 @@
                   $("#blockMargenUtilidad").show("200");
                   statusRMNA = 0;
               }
-              $("#dataRCP").toggle("slow");
+              $("#blockCompanyDetailsForRMND").toggle("slow");
           });
       });
       

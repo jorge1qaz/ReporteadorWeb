@@ -1,0 +1,354 @@
+br
+.container
+    .row
+        .col-md-3.col-sm-12
+                .card.card-inverse.card-info.text-center
+                    .card-block
+                        .form-group
+                            label(for='lstEmpresas') Tipo de moneda
+                            select#lstTipoMoneda.form-control
+                                option(value='Soles' selected="true") Nuevos soles
+                                option(value='Dolares') Dolares
+                        .form-group
+                            label(for='exampleSelect1') Mes de proceso
+                            select#lstMes.form-control
+                                option(value='', disabled='', selected='') Seleccione
+                                option(value='0') Apertura
+                                option(value='1') Enero
+                                option(value='2') Febrero
+                                option(value='3') Marzo
+                                option(value='4') Abril
+                                option(value='5') Mayo
+                                option(value='6') Junio
+                                option(value='7') Julio
+                                option(value='8') Agosto
+                                option(value='9') Septiembre
+                                option(value='10') Octubre
+                                option(value='11') Noviembre
+                                option(value='12') Diciembre
+                        .form-group
+                            button.btn.btn-success.form-control#btnGenerarReporte Generar reporte
+                                //i.material-icons.left show_chart
+        .col-md-9.col-sm-12
+            .card.card-outline-secondary.text-center
+                .card-block
+                    h4.card-title Estado de situación financiera
+                    table.table.table-bordered.table-responsive.table-hover.table-sm.table-striped
+                        tbody
+                            tr
+                                th.text-center(colspan="2") Activo
+                                th.text-center(colspan="2") Pasivo y patrimonio 
+                            tr
+                                th.text-center(colspan="2") Activo corriente
+                                th.text-center(colspan="2") Pasivo corriente
+                            tr
+                                td
+                                    label Efectivo y equivalentes de efectivo
+                                td
+                                    span#lblA105
+                                td
+                                    label Otros pasivos financieros 
+                                td
+                                    span#lblP105
+                            tr
+                                td
+                                    label Otros activos financieros
+                                td
+                                    span#lblA110
+                                td
+                                    label Cuentas por pagar comerciales
+                                td
+                                    span#lblP110
+                            tr
+                                td
+                                    label Cuentas por cobrar comerciales (neto)
+                                td
+                                    span#lblA115
+                                td
+                                    label Otras cuentas por pagar
+                                td
+                                    span#lblP120
+                            tr
+                                td
+                                    label Otras cuentas por cobrar (neto)
+                                td
+                                    span#lblA120
+                                td
+                                    label Cuentas por pagar a entidades relacionadas
+                                td
+                                    span#lblP121
+                            tr
+                                td
+                                    label Cuentas por cobrar a entidades relacionadas
+                                td
+                                    span#lblA125
+                                td
+                                    label Ingresos diferidos
+                                td
+                                    span#lblP123
+                            tr
+                                td
+                                    label Anticipos
+                                td
+                                    span#lblA128
+                                td
+                                    label Provisión por beneficios a los empleados
+                                td
+                                    span#lblP125
+                            tr
+                                td
+                                    label Inventarios
+                                td
+                                    span#lblA130
+                                td
+                                    label Otras provisiones
+                                td
+                                    span#lblP130
+                            tr
+                                td
+                                    label Activos biológicos 
+                                td
+                                    span#lblA131
+                                td
+                                    label Pasivos por impuestos a las ganancias 
+                                td
+                                    span#lblP135
+                            tr
+                                td
+                                    label Activos por impuestos a las ganancias 
+                                td
+                                    span#lblA133
+                                td
+                                    label Otros pasivos no financieros
+                                td
+                                    span#lblP137
+                            tr
+                                td
+                                    label Otros activos no financieros
+                                td
+                                    span#lblA140
+                                th.text-center
+                                    label Total pasivo corriente distintos mantenidos para la venta
+                                td
+                                    span#lblP199
+                            tr
+                                th.text-center 
+                                    label Total activos corrientes distintos mantenidos para la venta
+                                th.text-center
+                                    span#lblA199
+                                td
+                                    label Pasivo incluido en activo mantenido para la venta
+                                td
+                                    span#lblP210
+                            tr
+                                td
+                                    label Activos no corrientes mantenidos para la venta
+                                td
+                                    span#lblA210
+                                th.text-center
+                                    label Total pasivos corrientes
+                                th.text-center
+                                    span#lblP399
+                            tr
+                                td
+                                    label Activos no corrientes para distribuir a propiedades
+                                td
+                                    span#lblA220
+                                th.text-center
+                                    label Pasivos no corrientes
+                                th.text-center
+                                    span#lblP400
+                            tr
+                                th.text-center
+                                    label Activo no corriente mantenidos para la venta y operaciones discontinuadas
+                                th.text-center
+                                    span#lblA299
+                                td
+                                    label Otros pasivos financieros
+                                td
+                                    span#lblP410
+                            tr
+                                th.text-center
+                                    label Total activo corriente
+                                th.text-center
+                                    span#lblA399
+                                td
+                                    label Cuentas por pagar comerciales
+                                td
+                                    span#lblP415
+                            tr
+                                th.text-center
+                                    label Activos no corrientes
+                                th.text-center
+                                    span#lblA500
+                                td
+                                    label Otras cuentas por pagar
+                                td
+                                    span#lblP420
+                            tr
+                                td
+                                    label Otros activos financieros
+                                td
+                                    span#lblA510
+                                td
+                                    label Cuentas por pagar a entidades relacionadas
+                                td
+                                    span#lblP425
+                            tr
+                                td
+                                    label Inversiones en subsidiarias, negocios con activos
+                                td
+                                    span#lblA513
+                                td
+                                    label Ingresos diferidos
+                                td
+                                    span#lblP430
+                            tr
+                                td
+                                    label Cuentas por cobrar comerciales 
+                                td
+                                    span#lblA515
+                                td
+                                    label Provisión por beneficios a los empleados
+                                td
+                                    span#lblP435
+                            tr
+                                td
+                                    label Otras cuentas por cobrar
+                                td
+                                    span#lblA517
+                                td
+                                    label Otras provisiones
+                                td
+                                    span#lblP440
+                            tr
+                                td
+                                    label Cuentas por cobrar a entidades relacionadas
+                                td
+                                    span#lblA520
+                                td
+                                    label Pasivos por impuestos diferidos
+                                td
+                                    span#lblP445
+                            tr
+                                td
+                                    label Anticipos
+                                td
+                                    span#lblA525
+                                td
+                                    label Otros pasivos no financieros
+                                td
+                                    span#lblP450
+                            tr
+                                td
+                                    label Activos biológicos
+                                td
+                                    span#lblA530
+                                th.text-center
+                                    label Total pasivos no corrientes
+                                th.text-center
+                                    span#lblP499
+                            tr
+                                td
+                                    label Propiedades de inversión
+                                td
+                                    span#lblA540
+                                th.text-center
+                                    label Total pasivo
+                                th.text-center
+                                    span#lblP699
+                            tr
+                                td
+                                    label Propiedades plantas y equipos (neto)
+                                td
+                                    span#lblA550
+                                th.text-center
+                                    label Patrimonio
+                                th.text-center
+                                    span#lblP800
+                            tr
+                                td
+                                    label Activos intangibles distintos de la plusvalía
+                                td
+                                    span#lblA560
+                                td
+                                    label Capital emitido
+                                td
+                                    span#lblP805
+                            tr
+                                td
+                                    label Activos por impuestos diferidos
+                                td
+                                    span#lblA570
+                                td
+                                    label Primas de emisión
+                                td
+                                    span#lblP810
+                            tr
+                                td
+                                    label Plusvalía
+                                td
+                                    span#lblA575
+                                td
+                                    label Acciones de inversión
+                                td
+                                    span#lblP815
+                            tr
+                                td
+                                    label Otros activos no financieros
+                                td
+                                    span#lblA580
+                                td
+                                    label Acciones propias en cartera
+                                td
+                                    span#lblP820
+                            tr
+                                th.text-center
+                                    label Total activo no corriente
+                                th.text-center
+                                    span#lblA599
+                                td
+                                    
+                                    label Otras reservas de capital
+                                td
+                                    span#lblP830
+                            tr
+                                td
+                                    label
+                                td
+                                    span
+                                td
+                                    
+                                    label Resultados acumulados
+                                td
+                                    span#lblP835
+                            tr
+                                td
+                                    label
+                                td
+                                    span
+                                td
+                                    
+                                    label Otras reservas de patrimonio
+                                td
+                                    span#lblP840
+                            tr
+                                th.text-center
+                                    label Total activo
+                                th.text-center
+                                    span#lblA999
+                                th.text-center
+                                    label Total patrimonio
+                                th.text-center
+                                    span#lblP899
+                            tr
+                                th.text-center
+                                    label
+                                th.text-center
+                                    span
+                                th.text-center
+                                    label Total pasivo y patrimonio neto
+                                th.text-center
+                                    span#lblP999
+
+                            
