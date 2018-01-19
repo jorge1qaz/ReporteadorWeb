@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
+  <!--script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')-->
+  <script src="../js/jquery-3.2.1.min.js" text="javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="../js/datatables/jquery.dataTables.min.js" text="javascript"></script>
+  <script src="../js/datatables/dataTables.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/dataTables.responsive.min.js" text="javascript"></script>
+  <script src="../js/datatables/responsive.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/autoFill.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/buttons.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/validaciones/jquery.validate.min.js" text="javascript"></script>
+  <script src="../js/validaciones/additional-methods.min.js" text="javascript"></script>
+  <link rel="stylesheet" href="../style/datatables/dataTables.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/buttons.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../fonts/google/material-icons.css"/>
+  <link rel="stylesheet" href="../style/datatables/autoFill.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/colReorder.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/fixedColumns.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/fixedHeader.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/keyTable.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/responsive.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/rowGroup.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/rowReorder.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/scroller.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/select.bootstrap4.min.css"/>
+  <!--link(rel="stylesheet", href="../style/dt.css")-->
+  <title>Reportes</title>
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded bg-dark">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#">Cuentas pendientes</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link disabled" href="#"> <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"> </a></li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <label style="margin-right: 15px ;">Jorge Luis</label>
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Cerrar sesión</button>
+      </div>
+    </div>
+  </nav>
+  <body>
+    <table class="table table-striped table-bordered display table-responsive" id="tableNaturaleza">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Activo</th>
+          <th>Monto</th>
+          <th>Código</th>
+          <th>Pasivo y patrimonio</th>
+          <th>Monto</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Código</th>
+          <th>Activo</th>
+          <th>Monto</th>
+          <th>Código</th>
+          <th>Pasivo y patrimonio</th>
+          <th>Monto</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>A105</td>
+          <td>Caja y bancos</td>
+          <td>
+            <asp:label id="lblA105" runat="server"></asp:label>
+          </td>
+          <th></th>
+          <th>Pasivo</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>A106</td>
+          <td>Inversiones a valor razonable y disponible venta</td>
+          <td>
+            <asp:label id="lblA106" runat="server"></asp:label>
+          </td>
+          <td>P105</td>
+          <td>Sobregiros bancarios</td>
+          <td>
+            <asp:label id="lblP105" runat="server">   </asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A110</td>
+          <td>Cuentas cobrar comerciales - terceros</td>
+          <td>
+            <asp:label id="lblA110" runat="server"></asp:label>
+          </td>
+          <td>P110</td>
+          <td>Tributos por pagar </td>
+          <td>
+            <asp:label id="lblP110" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A111</td>
+          <td>Cuentas cobrar comerciales - relacionado</td>
+          <td>
+            <asp:label id="lblA111" runat="server"></asp:label>
+          </td>
+          <td>P115</td>
+          <td>Remuneraciones y participaciones, por pagar</td>
+          <td>
+            <asp:label id="lblP115" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A115</td>
+          <td>Cuentas que cobrar a personas, accionistas y gerentes</td>
+          <td>
+            <asp:label id="lblA115" runat="server"></asp:label>
+          </td>
+          <td>P120</td>
+          <td>Cuentas pagar comerciales - terceros </td>
+          <td>
+            <asp:label id="lblP120" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A120</td>
+          <td>Cuentas cobrar diversas - terceros</td>
+          <td>
+            <asp:label id="lblA120" runat="server"></asp:label>
+          </td>
+          <td>P121</td>
+          <td>Cuentas pagar comerciales - relacionados</td>
+          <td>
+            <asp:label id="lblP121" runat="server">  </asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A121</td>
+          <td>Cuentas cobrar diversas - relacionados</td>
+          <td>
+            <asp:label id="lblA121" runat="server"></asp:label>
+          </td>
+          <td>P122</td>
+          <td>Cuentas pagar accionista director y gerente</td>
+          <td>
+            <asp:label id="lblP122" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A122</td>
+          <td>Servicios y otros contratados anticipados</td>
+          <td>
+            <asp:label id="lblA122" runat="server"></asp:label>
+          </td>
+          <td>P128</td>
+          <td>Cuentas por pagar diversas - terceros</td>
+          <td>
+            <asp:label id="lblP128" runat="server"> </asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A123</td>
+          <td>Estimación cuentas cobranza dudosa</td>
+          <td>
+            <asp:label id="lblA123" runat="server"></asp:label>
+          </td>
+          <td>P129</td>
+          <td>Cuentas pagar diversas - relacionados</td>
+          <td>
+            <asp:label id="lblP129" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A124</td>
+          <td>Mercaderías</td>
+          <td>
+            <asp:label id="lblA124" runat="server"></asp:label>
+          </td>
+          <td>P133</td>
+          <td>Obligaciones financieras </td>
+          <td>
+            <asp:label id="lblP133" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A125</td>
+          <td>Productos terminados</td>
+          <td>
+            <asp:label id="lblA125" runat="server"></asp:label>
+          </td>
+          <td>P135</td>
+          <td>Provisiones </td>
+          <td>
+            <asp:label id="lblP135" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A130</td>
+          <td>Sub productos, desechos y desperdicios</td>
+          <td>
+            <asp:label id="lblA130" runat="server"></asp:label>
+          </td>
+          <td>P141</td>
+          <td>Pasivo diferido</td>
+          <td>
+            <asp:label id="lblP141" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A135</td>
+          <td>Productos en proceso</td>
+          <td>
+            <asp:label id="lblA135" runat="server"></asp:label>
+          </td>
+          <th>P199</th>
+          <th>Total pasivo</th>
+          <th>
+            <asp:label id="lblP199" runat="server"></asp:label>
+          </th>
+        </tr>
+        <tr>
+          <td>A140</td>
+          <td>Materias primas</td>
+          <td>
+            <asp:label id="lblA140" runat="server"></asp:label>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>A142</td>
+          <td>Materiales auxiliares, suministros y repuestos</td>
+          <td>
+            <asp:label id="lblA142" runat="server"></asp:label>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>A145</td>
+          <td>Envases y embalajes</td>
+          <td>
+            <asp:label id="lblA145" runat="server"></asp:label>
+          </td>
+          <th></th>
+          <th>Patrimonio</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>A151</td>
+          <td>Existencias por recibir</td>
+          <td>
+            <asp:label id="lblA151" runat="server"></asp:label>
+          </td>
+          <td>P505</td>
+          <td>Capital</td>
+          <td>
+            <asp:label id="lblP505" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A152</td>
+          <td>Desvalorización de existencias</td>
+          <td>
+            <asp:label id="lblA152" runat="server"></asp:label>
+          </td>
+          <td>P507</td>
+          <td>Acciones de inversión </td>
+          <td>
+            <asp:label id="lblP507" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A153</td>
+          <td>Activos no corrientes mantenido para venta</td>
+          <td>
+            <asp:label id="lblA153" runat="server"></asp:label>
+          </td>
+          <td>P510</td>
+          <td>Capital adicional</td>
+          <td>
+            <asp:label id="lblP510" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A155</td>
+          <td>Otros activos corrientes</td>
+          <td>
+            <asp:label id="lblA155" runat="server"></asp:label>
+          </td>
+          <td>P511</td>
+          <td>Resultados no realizados</td>
+          <td>
+            <asp:label id="lblP511" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A157</td>
+          <td>Inversiones mobiliarias</td>
+          <td>
+            <asp:label id="lblA157" runat="server"></asp:label>
+          </td>
+          <td>P515</td>
+          <td>Excedente de revaluación </td>
+          <td>
+            <asp:label id="lblP515" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A158</td>
+          <td>Inversiones inmobiliarias (1)</td>
+          <td>
+            <asp:label id="lblA158" runat="server"></asp:label>
+          </td>
+          <td>P520</td>
+          <td>Reservas</td>
+          <td>
+            <asp:label id="lblP520" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A159</td>
+          <td>Activos adquiridos. Arrendamiento financiero (2)</td>
+          <td>
+            <asp:label id="lblA159" runat="server"></asp:label>
+          </td>
+          <td>P530</td>
+          <td>Resultados acumulados positivo</td>
+          <td>
+            <asp:label id="lblP530" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A160</td>
+          <td>Inmuebles, maquinarias y equipos</td>
+          <td>
+            <asp:label id="lblA160" runat="server"></asp:label>
+          </td>
+          <td>P531</td>
+          <td>Resultados acumulados negativo</td>
+          <td>
+            <asp:label id="lblP531" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A164</td>
+          <td>Depreciación de 1 y 2 e inmueble maquinaria equipo acumulado</td>
+          <td>
+            <asp:label id="lblA164" runat="server"></asp:label>
+          </td>
+          <td>PResultado</td>
+          <td>Utilidad del ejercicio</td>
+          <td>
+            <asp:label id="lblPResultado" runat="server"> </asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A176</td>
+          <td>Intangibles</td>
+          <td>
+            <asp:label id="lblA176" runat="server"></asp:label>
+          </td>
+          <td>P541</td>
+          <td>Pérdida del ejercicio</td>
+          <td>
+            <asp:label id="lblP541" runat="server"> </asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>A177</td>
+          <td>Activos biológicos</td>
+          <td>
+            <asp:label id="lblA177" runat="server"></asp:label>
+          </td>
+          <th>P599</th>
+          <th>Total patrimonio</th>
+          <th>
+            <asp:label id="lblP599" runat="server"></asp:label>
+          </th>
+        </tr>
+        <tr>
+          <td>A178</td>
+          <td>Depreciación activo biológico amortizado y agotamiento acumulado</td>
+          <td>
+            <asp:label id="lblA178" runat="server"></asp:label>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>A179</td>
+          <td>Desvalorización de activo inmovilizado</td>
+          <td>
+            <asp:label id="lblA179" runat="server"></asp:label>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>A180</td>
+          <td>Activo diferido</td>
+          <td>
+            <asp:label id="lblA180" runat="server"></asp:label>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>A185</td>
+          <td>Otros activos no corrientes</td>
+          <td>
+            <asp:label id="lblA185" runat="server"></asp:label>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>A999</th>
+          <th>Total activo neto</th>
+          <th>
+            <asp:label id="lblA999" runat="server"></asp:label>
+          </th>
+          <th>P999</th>
+          <th>Total pasivo y patrimonio</th>
+          <th>
+            <asp:label id="lblP999" runat="server"></asp:label>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

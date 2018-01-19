@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
+  <!--script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')-->
+  <script src="../js/jquery-3.2.1.min.js" text="javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="../js/datatables/jquery.dataTables.min.js" text="javascript"></script>
+  <script src="../js/datatables/dataTables.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/dataTables.responsive.min.js" text="javascript"></script>
+  <script src="../js/datatables/responsive.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/autoFill.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/buttons.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/validaciones/jquery.validate.min.js" text="javascript"></script>
+  <script src="../js/validaciones/additional-methods.min.js" text="javascript"></script>
+  <link rel="stylesheet" href="../style/datatables/dataTables.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/buttons.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../fonts/google/material-icons.css"/>
+  <link rel="stylesheet" href="../style/datatables/autoFill.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/colReorder.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/fixedColumns.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/fixedHeader.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/keyTable.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/responsive.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/rowGroup.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/rowReorder.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/scroller.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/select.bootstrap4.min.css"/>
+  <!--link(rel="stylesheet", href="../style/dt.css")-->
+  <title>Reportes</title>
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded bg-dark">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#">Cuentas pendientes</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link disabled" href="#"> <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"> </a></li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <label style="margin-right: 15px ;">Jorge Luis</label>
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Cerrar sesión</button>
+      </div>
+    </div>
+  </nav>
+  <body>
+    <table class="table table-striped table-bordered display table-responsive" id="tableNaturaleza">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Descripción</th>
+          <th>Monto</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Código</th>
+          <th>Descripción</th>
+          <th>Monto</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>F005</td>
+          <td>Ventas netas o ingresos por servicios</td>
+          <td>
+            <asp:label id="lblF005" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>F010</td>
+          <td>( - ) descuentos rebajas y bonificaciones concedidas</td>
+          <td>
+            <asp:label id="lblF010" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <th>F099</th>
+          <th>Ventas netas </th>
+          <th>
+            <asp:label id="lblF099" runat="server"></asp:label>
+          </th>
+        </tr>
+        <tr>
+          <td>F115</td>
+          <td>( - ) costo de ventas </td>
+          <td>
+            <asp:label id="lblF115" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <th>F199</th>
+          <th>Resultado bruto </th>
+          <th>
+            <asp:label id="lblF199" runat="server"></asp:label>
+          </th>
+        </tr>
+        <tr>
+          <td>F205</td>
+          <td>( - ) gastos de ventas</td>
+          <td>
+            <asp:label id="lblF205" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>F210</td>
+          <td>( - ) gastos de administración</td>
+          <td>
+            <asp:label id="lblF210" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <th>F299</th>
+          <th>Resultado de operación</th>
+          <th>
+            <asp:label id="lblF299" runat="server"></asp:label>
+          </th>
+        </tr>
+        <tr>
+          <td>F502</td>
+          <td>Gastos financieros </td>
+          <td>
+            <asp:label id="lblF502" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>F505</td>
+          <td>Ingresos financieros gravados </td>
+          <td>
+            <asp:label id="lblF505" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>F510</td>
+          <td>Otros ingresos gravados  </td>
+          <td>
+            <asp:label id="lblF510" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>F515</td>
+          <td>Otros ingresos no gravados  </td>
+          <td>
+            <asp:label id="lblF515" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>F520</td>
+          <td>Enajenación de valores y bienes del activo fijo </td>
+          <td>
+            <asp:label id="lblF520" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>F525</td>
+          <td>Costo enajenación de valores y bienes - activo fijo</td>
+          <td>
+            <asp:label id="lblF525" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>F530</td>
+          <td>Gastos diversos </td>
+          <td>
+            <asp:label id="lblF530" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <td>F560</td>
+          <td>Resultado por exposición a la inflación del ejercicio </td>
+          <td>
+            <asp:label id="lblF560" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <th>F599</th>
+          <th>Resultados antes de participaciones</th>
+          <th>
+            <asp:label id="lblF599" runat="server"></asp:label>
+          </th>
+        </tr>
+        <tr>
+          <td>F605</td>
+          <td>( - ) distribución legal de la renta </td>
+          <td>
+            <asp:label id="lblF605" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <th>F699</th>
+          <th>Resultado antes del impuesto</th>
+          <th>
+            <asp:label id="lblF699" runat="server"></asp:label>
+          </th>
+        </tr>
+        <tr>
+          <td>F705</td>
+          <td>( - ) impuesto a la renta</td>
+          <td>
+            <asp:label id="lblF705" runat="server"></asp:label>
+          </td>
+        </tr>
+        <tr>
+          <th>F999</th>
+          <th>Resultado del ejercicio </th>
+          <th>
+            <asp:label id="lblF999" runat="server"></asp:label>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

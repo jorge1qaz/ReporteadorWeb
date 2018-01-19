@@ -1,449 +1,601 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
-  <!--script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')-->
-  <script src="../js/jquery-3.2.1.min.js" text="javascript"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <script src="../js/datatables/jquery.dataTables.min.js" text="javascript"></script>
-  <script src="../js/datatables/dataTables.bootstrap4.min.js" text="javascript"></script>
-  <script src="../js/datatables/dataTables.responsive.min.js" text="javascript"></script>
-  <script src="../js/datatables/responsive.bootstrap4.min.js" text="javascript"></script>
-  <script src="../js/datatables/autoFill.bootstrap4.min.js" text="javascript"></script>
-  <script src="../js/datatables/buttons.bootstrap4.min.js" text="javascript"></script>
-  <script src="../js/validaciones/jquery.validate.min.js" text="javascript"></script>
-  <script src="../js/validaciones/additional-methods.min.js" text="javascript"></script>
-  <link rel="stylesheet" href="../style/datatables/dataTables.bootstrap4.min.css"/>
-  <link rel="stylesheet" href="../style/datatables/buttons.bootstrap4.min.css"/>
-  <link rel="stylesheet" href="../fonts/google/material-icons.css"/>
-  <link rel="stylesheet" href="../style/datatables/autoFill.bootstrap4.min.css"/>
-  <link rel="stylesheet" href="../style/datatables/colReorder.bootstrap4.min.css"/>
-  <link rel="stylesheet" href="../style/datatables/fixedColumns.bootstrap4.min.css"/>
-  <link rel="stylesheet" href="../style/datatables/fixedHeader.bootstrap4.min.css"/>
-  <link rel="stylesheet" href="../style/datatables/keyTable.bootstrap4.min.css"/>
-  <link rel="stylesheet" href="../style/datatables/responsive.bootstrap4.min.css"/>
-  <link rel="stylesheet" href="../style/datatables/rowGroup.bootstrap4.min.css"/>
-  <link rel="stylesheet" href="../style/datatables/rowReorder.bootstrap4.min.css"/>
-  <link rel="stylesheet" href="../style/datatables/scroller.bootstrap4.min.css"/>
-  <link rel="stylesheet" href="../style/datatables/select.bootstrap4.min.css"/>
-  <!--link(rel="stylesheet", href="../style/dt.css")-->
-  <title>Reportes</title>
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded bg-dark">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#">Cuentas pendientes</a>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous" />
+<!--script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')-->
+<script src="../js/jquery-3.2.1.min.js" text="javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    crossorigin="anonymous"></script>
+<script src="../js/datatables/jquery.dataTables.min.js" text="javascript"></script>
+<script src="../js/datatables/dataTables.bootstrap4.min.js" text="javascript"></script>
+<script src="../js/datatables/dataTables.responsive.min.js" text="javascript"></script>
+<script src="../js/datatables/responsive.bootstrap4.min.js" text="javascript"></script>
+<script src="../js/datatables/autoFill.bootstrap4.min.js" text="javascript"></script>
+<script src="../js/datatables/buttons.bootstrap4.min.js" text="javascript"></script>
+<script src="../js/validaciones/jquery.validate.min.js" text="javascript"></script>
+<script src="../js/validaciones/additional-methods.min.js" text="javascript"></script>
+<link rel="stylesheet" href="../style/datatables/dataTables.bootstrap4.min.css" />
+<link rel="stylesheet" href="../style/datatables/buttons.bootstrap4.min.css" />
+<link rel="stylesheet" href="../fonts/google/material-icons.css" />
+<link rel="stylesheet" href="../style/datatables/autoFill.bootstrap4.min.css" />
+<link rel="stylesheet" href="../style/datatables/colReorder.bootstrap4.min.css" />
+<link rel="stylesheet" href="../style/datatables/fixedColumns.bootstrap4.min.css" />
+<link rel="stylesheet" href="../style/datatables/fixedHeader.bootstrap4.min.css" />
+<link rel="stylesheet" href="../style/datatables/keyTable.bootstrap4.min.css" />
+<link rel="stylesheet" href="../style/datatables/responsive.bootstrap4.min.css" />
+<link rel="stylesheet" href="../style/datatables/rowGroup.bootstrap4.min.css" />
+<link rel="stylesheet" href="../style/datatables/rowReorder.bootstrap4.min.css" />
+<link rel="stylesheet" href="../style/datatables/scroller.bootstrap4.min.css" />
+<link rel="stylesheet" href="../style/datatables/select.bootstrap4.min.css" />
+<!--link(rel="stylesheet", href="../style/dt.css")-->
+<title>Reportes</title>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded bg-dark">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Cuentas pendientes</a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active"><a class="nav-link disabled" href="#"> <span class="sr-only">(current)</span></a></li>
-        <li class="nav-item"><a class="nav-link" href="#"> </a></li>
-      </ul>
-      <div class="form-inline my-2 my-lg-0">
-        <label style="margin-right: 15px ;">Jorge Luis</label>
-        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Cerrar sesión</button>
-      </div>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link disabled" href="#">
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"> </a>
+            </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <label style="margin-right: 15px ;">Jorge Luis</label>
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Cerrar sesión</button>
+        </div>
     </div>
-  </nav>
-  <body><br/>
+</nav>
+
+<body>
+    <br/>
     <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-12">
-          <div class="card card-inverse card-info text-center">
-            <div class="card-block">
-              <div class="form-group">
-                <label for="lstEmpresas">Tipo de moneda</label>
-                <select class="form-control" id="lstTipoMoneda">
-                  <option value="Soles" selected="true">Nuevos soles</option>
-                  <option value="Dolares">Dolares</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="exampleSelect1">Mes de proceso</label>
-                <select class="form-control" id="lstMes">
-                  <option value="" disabled="" selected="">Seleccione</option>
-                  <option value="0">Apertura</option>
-                  <option value="1">Enero</option>
-                  <option value="2">Febrero</option>
-                  <option value="3">Marzo</option>
-                  <option value="4">Abril</option>
-                  <option value="5">Mayo</option>
-                  <option value="6">Junio</option>
-                  <option value="7">Julio</option>
-                  <option value="8">Agosto</option>
-                  <option value="9">Septiembre</option>
-                  <option value="10">Octubre</option>
-                  <option value="11">Noviembre</option>
-                  <option value="12">Diciembre</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <button class="btn btn-success form-control" id="btnGenerarReporte">Generar reporte
-                  <!--i.material-icons.left show_chart-->
-                </button>
-              </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-12">
+                <div class="card card-inverse card-info text-center">
+                    <div class="card-block">
+                        <div class="form-group">
+                            <label for="lstEmpresas">Tipo de moneda</label>
+                            <select class="form-control" id="lstTipoMoneda">
+                                <option value="Soles" selected="true">Nuevos soles</option>
+                                <option value="Dolares">Dolares</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleSelect1">Mes de proceso</label>
+                            <select class="form-control" id="lstMes">
+                                <option value="" disabled="" selected="">Seleccione</option>
+                                <option value="0">Apertura</option>
+                                <option value="1">Enero</option>
+                                <option value="2">Febrero</option>
+                                <option value="3">Marzo</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Mayo</option>
+                                <option value="6">Junio</option>
+                                <option value="7">Julio</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success form-control" id="btnGenerarReporte">Generar reporte
+                                <!--i.material-icons.left show_chart-->
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-9 col-sm-12">
-          <div class="card card-outline-secondary text-center">
-            <div class="card-block">
-              <h4 class="card-title">Estado de situación financiera</h4>
-              <table class="table table-bordered table-responsive table-hover table-sm table-striped">
-                <tbody>
-                  <tr>
-                    <th class="text-center" colspan="2">Activo</th>
-                    <th class="text-center" colspan="2">Pasivo y patrimonio </th>
-                  </tr>
-                  <tr>
-                    <th class="text-center" colspan="2">Activo corriente</th>
-                    <th class="text-center" colspan="2">Pasivo corriente</th>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Efectivo y equivalentes de efectivo</label>
-                    </td>
-                    <td><span id="lblA105"></span></td>
-                    <td>
-                      <label>Otros pasivos financieros </label>
-                    </td>
-                    <td><span id="lblP105"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Otros activos financieros</label>
-                    </td>
-                    <td><span id="lblA110"></span></td>
-                    <td>
-                      <label>Cuentas por pagar comerciales</label>
-                    </td>
-                    <td><span id="lblP110"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Cuentas por cobrar comerciales (neto)</label>
-                    </td>
-                    <td><span id="lblA115"></span></td>
-                    <td>
-                      <label>Otras cuentas por pagar</label>
-                    </td>
-                    <td><span id="lblP120"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Otras cuentas por cobrar (neto)</label>
-                    </td>
-                    <td><span id="lblA120"></span></td>
-                    <td>
-                      <label>Cuentas por pagar a entidades relacionadas</label>
-                    </td>
-                    <td><span id="lblP121"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Cuentas por cobrar a entidades relacionadas</label>
-                    </td>
-                    <td><span id="lblA125"></span></td>
-                    <td>
-                      <label>Ingresos diferidos</label>
-                    </td>
-                    <td><span id="lblP123"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Anticipos</label>
-                    </td>
-                    <td><span id="lblA128"></span></td>
-                    <td>
-                      <label>Provisión por beneficios a los empleados</label>
-                    </td>
-                    <td><span id="lblP125"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Inventarios</label>
-                    </td>
-                    <td><span id="lblA130"></span></td>
-                    <td>
-                      <label>Otras provisiones</label>
-                    </td>
-                    <td><span id="lblP130"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Activos biológicos </label>
-                    </td>
-                    <td><span id="lblA131"></span></td>
-                    <td>
-                      <label>Pasivos por impuestos a las ganancias </label>
-                    </td>
-                    <td><span id="lblP135"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Activos por impuestos a las ganancias </label>
-                    </td>
-                    <td><span id="lblA133"></span></td>
-                    <td>
-                      <label>Otros pasivos no financieros</label>
-                    </td>
-                    <td><span id="lblP137"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Otros activos no financieros</label>
-                    </td>
-                    <td><span id="lblA140"></span></td>
-                    <th class="text-center">
-                      <label>Total pasivo corriente distintos mantenidos para la venta</label>
-                    </th>
-                    <td><span id="lblP199"></span></td>
-                  </tr>
-                  <tr>
-                    <th class="text-center"> 
-                      <label>Total activos corrientes distintos mantenidos para la venta</label>
-                    </th>
-                    <th class="text-center"><span id="lblA199"></span></th>
-                    <td>
-                      <label>Pasivo incluido en activo mantenido para la venta</label>
-                    </td>
-                    <td><span id="lblP210"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Activos no corrientes mantenidos para la venta</label>
-                    </td>
-                    <td><span id="lblA210"></span></td>
-                    <th class="text-center">
-                      <label>Total pasivos corrientes</label>
-                    </th>
-                    <th class="text-center"><span id="lblP399"></span></th>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Activos no corrientes para distribuir a propiedades</label>
-                    </td>
-                    <td><span id="lblA220"></span></td>
-                    <th class="text-center">
-                      <label>Pasivos no corrientes</label>
-                    </th>
-                    <th class="text-center"><span id="lblP400"></span></th>
-                  </tr>
-                  <tr>
-                    <th class="text-center">
-                      <label>Activo no corriente mantenidos para la venta y operaciones discontinuadas</label>
-                    </th>
-                    <th class="text-center"><span id="lblA299"></span></th>
-                    <td>
-                      <label>Otros pasivos financieros</label>
-                    </td>
-                    <td><span id="lblP410"></span></td>
-                  </tr>
-                  <tr>
-                    <th class="text-center">
-                      <label>Total activo corriente</label>
-                    </th>
-                    <th class="text-center"><span id="lblA399"></span></th>
-                    <td>
-                      <label>Cuentas por pagar comerciales</label>
-                    </td>
-                    <td><span id="lblP415"></span></td>
-                  </tr>
-                  <tr>
-                    <th class="text-center">
-                      <label>Activos no corrientes</label>
-                    </th>
-                    <th class="text-center"><span id="lblA500"></span></th>
-                    <td>
-                      <label>Otras cuentas por pagar</label>
-                    </td>
-                    <td><span id="lblP420"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Otros activos financieros</label>
-                    </td>
-                    <td><span id="lblA510"></span></td>
-                    <td>
-                      <label>Cuentas por pagar a entidades relacionadas</label>
-                    </td>
-                    <td><span id="lblP425"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Inversiones en subsidiarias, negocios con activos</label>
-                    </td>
-                    <td><span id="lblA513"></span></td>
-                    <td>
-                      <label>Ingresos diferidos</label>
-                    </td>
-                    <td><span id="lblP430"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Cuentas por cobrar comerciales </label>
-                    </td>
-                    <td><span id="lblA515"></span></td>
-                    <td>
-                      <label>Provisión por beneficios a los empleados</label>
-                    </td>
-                    <td><span id="lblP435"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Otras cuentas por cobrar</label>
-                    </td>
-                    <td><span id="lblA517"></span></td>
-                    <td>
-                      <label>Otras provisiones</label>
-                    </td>
-                    <td><span id="lblP440"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Cuentas por cobrar a entidades relacionadas</label>
-                    </td>
-                    <td><span id="lblA520"></span></td>
-                    <td>
-                      <label>Pasivos por impuestos diferidos</label>
-                    </td>
-                    <td><span id="lblP445"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Anticipos</label>
-                    </td>
-                    <td><span id="lblA525"></span></td>
-                    <td>
-                      <label>Otros pasivos no financieros</label>
-                    </td>
-                    <td><span id="lblP450"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Activos biológicos</label>
-                    </td>
-                    <td><span id="lblA530"></span></td>
-                    <th class="text-center">
-                      <label>Total pasivos no corrientes</label>
-                    </th>
-                    <th class="text-center"><span id="lblP499"></span></th>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Propiedades de inversión</label>
-                    </td>
-                    <td><span id="lblA540"></span></td>
-                    <th class="text-center">
-                      <label>Total pasivo</label>
-                    </th>
-                    <th class="text-center"><span id="lblP699"></span></th>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Propiedades plantas y equipos (neto)</label>
-                    </td>
-                    <td><span id="lblA550"></span></td>
-                    <th class="text-center">
-                      <label>Patrimonio</label>
-                    </th>
-                    <th class="text-center"><span id="lblP800"></span></th>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Activos intangibles distintos de la plusvalía</label>
-                    </td>
-                    <td><span id="lblA560"></span></td>
-                    <td>
-                      <label>Capital emitido</label>
-                    </td>
-                    <td><span id="lblP805"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Activos por impuestos diferidos</label>
-                    </td>
-                    <td><span id="lblA570"></span></td>
-                    <td>
-                      <label>Primas de emisión</label>
-                    </td>
-                    <td><span id="lblP810"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Plusvalía</label>
-                    </td>
-                    <td><span id="lblA575"></span></td>
-                    <td>
-                      <label>Acciones de inversión</label>
-                    </td>
-                    <td><span id="lblP815"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label>Otros activos no financieros</label>
-                    </td>
-                    <td><span id="lblA580"></span></td>
-                    <td>
-                      <label>Acciones propias en cartera</label>
-                    </td>
-                    <td><span id="lblP820"></span></td>
-                  </tr>
-                  <tr>
-                    <th class="text-center">
-                      <label>Total activo no corriente</label>
-                    </th>
-                    <th class="text-center"><span id="lblA599"></span></th>
-                    <td>
-                      <label>Otras reservas de capital</label>
-                    </td>
-                    <td><span id="lblP830"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label></label>
-                    </td>
-                    <td><span></span></td>
-                    <td>
-                      <label>Resultados acumulados</label>
-                    </td>
-                    <td><span id="lblP835"></span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label></label>
-                    </td>
-                    <td><span></span></td>
-                    <td>
-                      <label>Otras reservas de patrimonio</label>
-                    </td>
-                    <td><span id="lblP840"></span></td>
-                  </tr>
-                  <tr>
-                    <th class="text-center">
-                      <label>Total activo</label>
-                    </th>
-                    <th class="text-center"><span id="lblA999"></span></th>
-                    <th class="text-center">
-                      <label>Total patrimonio</label>
-                    </th>
-                    <th class="text-center"><span id="lblP899"></span></th>
-                  </tr>
-                  <tr>
-                    <th class="text-center">
-                      <label></label>
-                    </th>
-                    <th class="text-center"><span></span></th>
-                    <th class="text-center">
-                      <label>Total pasivo y patrimonio neto</label>
-                    </th>
-                    <th class="text-center"><span id="lblP999"></span></th>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="col-md-9 col-sm-12">
+                <div class="card card-outline-secondary text-center">
+                    <div class="card-block">
+                        <h4 class="card-title">Estado de situación financiera</h4>
+                        <table class="table table-bordered table-responsive table-hover table-sm table-striped">
+                            <tbody>
+                                <tr>
+                                    <th class="text-center" colspan="2">Activo</th>
+                                    <th class="text-center" colspan="2">Pasivo y patrimonio </th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" colspan="2">Activo corriente</th>
+                                    <th class="text-center" colspan="2">Pasivo corriente</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Efectivo y equivalentes de efectivo</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA105"></span>
+                                    </td>
+                                    <td>
+                                        <label>Otros pasivos financieros </label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP105"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Otros activos financieros</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA110"></span>
+                                    </td>
+                                    <td>
+                                        <label>Cuentas por pagar comerciales</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP110"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Cuentas por cobrar comerciales (neto)</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA115"></span>
+                                    </td>
+                                    <td>
+                                        <label>Otras cuentas por pagar</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP120"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Otras cuentas por cobrar (neto)</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA120"></span>
+                                    </td>
+                                    <td>
+                                        <label>Cuentas por pagar a entidades relacionadas</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP121"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Cuentas por cobrar a entidades relacionadas</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA125"></span>
+                                    </td>
+                                    <td>
+                                        <label>Ingresos diferidos</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP123"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Anticipos</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA128"></span>
+                                    </td>
+                                    <td>
+                                        <label>Provisión por beneficios a los empleados</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP125"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Inventarios</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA130"></span>
+                                    </td>
+                                    <td>
+                                        <label>Otras provisiones</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP130"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Activos biológicos </label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA131"></span>
+                                    </td>
+                                    <td>
+                                        <label>Pasivos por impuestos a las ganancias </label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP135"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Activos por impuestos a las ganancias </label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA133"></span>
+                                    </td>
+                                    <td>
+                                        <label>Otros pasivos no financieros</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP137"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Otros activos no financieros</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA140"></span>
+                                    </td>
+                                    <th class="text-center">
+                                        <label>Total pasivo corriente distintos mantenidos para la venta</label>
+                                    </th>
+                                    <td>
+                                        <span id="lblP199"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">
+                                        <label>Total activos corrientes distintos mantenidos para la venta</label>
+                                    </th>
+                                    <th class="text-center">
+                                        <span id="lblA199"></span>
+                                    </th>
+                                    <td>
+                                        <label>Pasivo incluido en activo mantenido para la venta</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP210"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Activos no corrientes mantenidos para la venta</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA210"></span>
+                                    </td>
+                                    <th class="text-center">
+                                        <label>Total pasivos corrientes</label>
+                                    </th>
+                                    <th class="text-center">
+                                        <span id="lblP399"></span>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Activos no corrientes para distribuir a propiedades</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA220"></span>
+                                    </td>
+                                    <th class="text-center">
+                                        <label>Pasivos no corrientes</label>
+                                    </th>
+                                    <th class="text-center">
+                                        <span id="lblP400"></span>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">
+                                        <label>Activo no corriente mantenidos para la venta y operaciones discontinuadas</label>
+                                    </th>
+                                    <th class="text-center">
+                                        <span id="lblA299"></span>
+                                    </th>
+                                    <td>
+                                        <label>Otros pasivos financieros</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP410"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">
+                                        <label>Total activo corriente</label>
+                                    </th>
+                                    <th class="text-center">
+                                        <span id="lblA399"></span>
+                                    </th>
+                                    <td>
+                                        <label>Cuentas por pagar comerciales</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP415"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">
+                                        <label>Activos no corrientes</label>
+                                    </th>
+                                    <th class="text-center">
+                                        <span id="lblA500"></span>
+                                    </th>
+                                    <td>
+                                        <label>Otras cuentas por pagar</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP420"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Otros activos financieros</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA510"></span>
+                                    </td>
+                                    <td>
+                                        <label>Cuentas por pagar a entidades relacionadas</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP425"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Inversiones en subsidiarias, negocios con activos</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA513"></span>
+                                    </td>
+                                    <td>
+                                        <label>Ingresos diferidos</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP430"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Cuentas por cobrar comerciales </label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA515"></span>
+                                    </td>
+                                    <td>
+                                        <label>Provisión por beneficios a los empleados</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP435"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Otras cuentas por cobrar</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA517"></span>
+                                    </td>
+                                    <td>
+                                        <label>Otras provisiones</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP440"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Cuentas por cobrar a entidades relacionadas</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA520"></span>
+                                    </td>
+                                    <td>
+                                        <label>Pasivos por impuestos diferidos</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP445"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Anticipos</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA525"></span>
+                                    </td>
+                                    <td>
+                                        <label>Otros pasivos no financieros</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP450"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Activos biológicos</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA530"></span>
+                                    </td>
+                                    <th class="text-center">
+                                        <label>Total pasivos no corrientes</label>
+                                    </th>
+                                    <th class="text-center">
+                                        <span id="lblP499"></span>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Propiedades de inversión</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA540"></span>
+                                    </td>
+                                    <th class="text-center">
+                                        <label>Total pasivo</label>
+                                    </th>
+                                    <th class="text-center">
+                                        <span id="lblP699"></span>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Propiedades plantas y equipos (neto)</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA550"></span>
+                                    </td>
+                                    <th class="text-center">
+                                        <label>Patrimonio</label>
+                                    </th>
+                                    <th class="text-center">
+                                        <span id="lblP800"></span>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Activos intangibles distintos de la plusvalía</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA560"></span>
+                                    </td>
+                                    <td>
+                                        <label>Capital emitido</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP805"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Activos por impuestos diferidos</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA570"></span>
+                                    </td>
+                                    <td>
+                                        <label>Primas de emisión</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP810"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Plusvalía</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA575"></span>
+                                    </td>
+                                    <td>
+                                        <label>Acciones de inversión</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP815"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>Otros activos no financieros</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblA580"></span>
+                                    </td>
+                                    <td>
+                                        <label>Acciones propias en cartera</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP820"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">
+                                        <label>Total activo no corriente</label>
+                                    </th>
+                                    <th class="text-center">
+                                        <span id="lblA599"></span>
+                                    </th>
+                                    <td>
+                                        <label>Otras reservas de capital</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP830"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label></label>
+                                    </td>
+                                    <td>
+                                        <span></span>
+                                    </td>
+                                    <td>
+                                        <label>Resultados acumulados</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP835"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label></label>
+                                    </td>
+                                    <td>
+                                        <span></span>
+                                    </td>
+                                    <td>
+                                        <label>Otras reservas de patrimonio</label>
+                                    </td>
+                                    <td>
+                                        <span id="lblP840"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">
+                                        <label>Total activo</label>
+                                    </th>
+                                    <th class="text-center">
+                                        <span id="lblA999"></span>
+                                    </th>
+                                    <th class="text-center">
+                                        <label>Total patrimonio</label>
+                                    </th>
+                                    <th class="text-center">
+                                        <span id="lblP899"></span>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">
+                                        <label></label>
+                                    </th>
+                                    <th class="text-center">
+                                        <span></span>
+                                    </th>
+                                    <th class="text-center">
+                                        <label>Total pasivo y patrimonio neto</label>
+                                    </th>
+                                    <th class="text-center">
+                                        <span id="lblP999"></span>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </body>
+</body>
+
 </html>
