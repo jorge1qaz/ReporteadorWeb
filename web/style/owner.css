@@ -45,3 +45,28 @@
 .controles-chidori {
     background-color: rgba(206, 231, 243, 0.77) !important;
 }
+
+/* news */
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+.parallax-container .parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.parallax-container .parallax img {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate3d(0, 0, 0);
+    transform: translateX(0%);
+}

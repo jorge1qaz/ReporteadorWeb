@@ -1,5 +1,4 @@
 (function ($) {
-
   $.fn.parallax = function () {
     var window_width = $(window).width();
     // Parallax Scripts
@@ -23,7 +22,7 @@
         var scrollTop = $(window).scrollTop();
         var windowHeight = window.innerHeight;
         var windowBottom = scrollTop + windowHeight;
-        var percentScrolled = (windowBottom - top) / (container_height + windowHeight);
+        var percentScrolled = (windowBottom - top - 400) / (container_height + windowHeight);
         var parallax = Math.round((parallax_dist * percentScrolled));
 
         if (initial) {
@@ -34,8 +33,6 @@
         }
 
       }
-
-      // Wait for image load
       $this.children("img").one("load", function() {
         updateParallax(true);
       }).each(function() {
@@ -51,8 +48,6 @@
         window_width = $(window).width();
         updateParallax(false);
       });
-
     });
-
   };
 }( jQuery ));

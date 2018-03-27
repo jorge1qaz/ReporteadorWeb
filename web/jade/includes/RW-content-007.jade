@@ -1,8 +1,10 @@
+link(rel="stylesheet", href="../style/owner.css")
+.parallax-container
+    .parallax
+        img(src='../images/dashboard.jpg')
 .container
     br
     .card.text-center
-        .card-header
-            h2.text-center Inicio
         .card-block
             h4.card-title Bienvenido al sistema de reportes web Contasis
             p.card-text Seleccione
@@ -21,7 +23,13 @@
                     .card.card-outline-secondary.text-center
                         .card-block
                             blockquote.card-blockquote
-                                p Cuentas pendientes
+                                .col-md-12
+                                    .row.align-items-center
+                                        .col
+                                            img.img-fluid(src="../images/cuentas_pendientes_default.png", alt="")
+                                        br
+                                        .col
+                                            p Cuentas pendientes
                                 .row
                                     .col-md-8.offset-md-2.col-sm-12.offset-md-0
                                         #blockCompanyDetailsForRCP
@@ -53,7 +61,13 @@
                     .card.card-outline-success.text-center
                         .card-block
                             blockquote.card-blockquote
-                                p Margen de utilidad por producto
+                                .col-md-12
+                                    .row.align-items-center
+                                        .col
+                                            img.img-fluid(src="../images/margen_de_utilidad_default.png", alt="")
+                                        br
+                                        .col
+                                            p Margen de utilidad por producto
                                 .row
                                     .col-md-8.offset-md-2.col-sm-12.offset-md-0
                                         #blockCompanyDetailsForRMU
@@ -85,7 +99,14 @@
                     .card.card-outline-info.text-center
                         .card-block
                             blockquote.card-blockquote
-                                p Mi negocio al día
+                                .col-md-7
+                                    .row.align-items-center
+                                        .col
+                                            img.img-fluid(src="../images/mi_negocio_al_dia_default.png", alt="")
+                                .col-md-12
+                                    .row.align-items-center
+                                        .col
+                                            p Mi negocio al día
                                 .row
                                     .col-md-8.offset-md-2.col-sm-12.offset-md-0
                                         #blockCompanyDetailsForRMND
@@ -115,6 +136,7 @@
                                     button#btnMinegocioAlDia.btn.btn-info(role='button') Ver detalles
 script.
     $(function () {
+        $('.parallax').parallax();
         $('[data-toggle="tooltip"]').tooltip();
         var statusRCP = 0;
         var statusRMUP = 0;
@@ -171,5 +193,5 @@ script.
             $("#blockCompanyDetailsForRMND").toggle("slow");
         });
     });
-   
+script(src="../js/materialize/parallax.js")
                                 
