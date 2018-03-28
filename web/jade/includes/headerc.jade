@@ -1,0 +1,22 @@
+br
+br
+nav#navMaster.navbar.navbar-toggleable-md.navbar-light.bg-faded.bg-dark(runat='server', style='margin-top: -50px;')
+    button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+            li.nav-item.active
+                a(href='https://contasis.net/')
+                    img(src="../images/logo.png", alt="").nav-link
+            li.nav-item
+                br
+                a.nav-link(href='javascript: void(0);') Crear ítem
+            li.nav-item
+                br
+                a.nav-link(href='javascript: void(0);') Buscar ítems
+            li.nav-item
+                br
+                a.nav-link(href='javascript: void(0);') Ítems sin respuesta 
+        .form-inline.my-2.my-lg-0
+            asp:label#lblNombreUsuario(runat='server', style='margin-right: 15px;', text='')
+            a.btn.btn-outline-info.my-2.my-sm-0(href='~/Acceso.aspx', runat='server') Cerrar sesión

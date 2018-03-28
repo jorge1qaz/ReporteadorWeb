@@ -30,18 +30,19 @@
   <link rel="stylesheet" href="../style/datatables/rowReorder.bootstrap4.min.css"/>
   <link rel="stylesheet" href="../style/datatables/scroller.bootstrap4.min.css"/>
   <link rel="stylesheet" href="../style/datatables/select.bootstrap4.min.css"/>
-  <!--link(rel="stylesheet", href="../style/dt.css")-->
-  <title>Reportes</title>
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded bg-dark">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#">Cuentas pendientes</a>
+  <link rel="stylesheet" href="../style/fonts/material-icons.css"/>
+  <title>Reportes</title><br/><br/>
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded bg-dark" id="navMaster" runat="server" style="margin-top: -50px;">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active"><a class="nav-link disabled" href="#"> <span class="sr-only">(current)</span></a></li>
-        <li class="nav-item"><a class="nav-link" href="#"> </a></li>
+        <li class="nav-item active"><a href="https://contasis.net/"><img class="nav-link" src="../images/logo.png" alt=""/></a></li>
+        <li class="nav-item"><br/><a class="nav-link" href="javascript: void(0);">Crear ítem</a></li>
+        <li class="nav-item"><br/><a class="nav-link" href="javascript: void(0);">Buscar ítems</a></li>
+        <li class="nav-item"><br/><a class="nav-link" href="javascript: void(0);">Ítems sin respuesta </a></li>
       </ul>
       <div class="form-inline my-2 my-lg-0">
-        <label style="margin-right: 15px ">Jorge Luis</label>
-        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Cerrar sesión</button>
+        <asp:label id="lblNombreUsuario" runat="server" style="margin-right: 15px;" text=""></asp:label><a class="btn btn-outline-info my-2 my-sm-0" href="~/Acceso.aspx" runat="server">Cerrar sesión</a>
       </div>
     </div>
   </nav>
