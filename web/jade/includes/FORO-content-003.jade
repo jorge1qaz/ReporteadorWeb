@@ -1,0 +1,76 @@
+br
+.container
+    .row
+        .offset-md-1.offset-sm-0.col-md-10.col-sm-12
+            .form#Formulario
+                .card.card-secondary
+                    .card-block
+                        h5.text-center Creación de respuesta o edición para el ítem
+                        .text-center
+                            em Los campos marcados con un asterisco (*) son obligatorios.
+                        .row
+                            .col-md-12
+                                .form-group
+                                    label(for='txtTitulo') Título *
+                                    input.form-control(type='text', id="txtTitulo", placeholder='Ingrese el título', value="El sistema no puede responder su solicitud")
+                        .row
+                            .col-md-12
+                                .form-group
+                                    label(for='txtDescripcion') Descripción
+                                    textarea.form-control(type='text', id="txtDescripcion" placeholder='Ingrese la descripción', rows="10")
+                        .row
+                            .col-md-6.col-sm-12
+                                .form-group
+                                    label(for='txtCodigo') Código
+                                    input#txtCodigo.form-control(name="txtRUC", placeholder="Código del ítem", value="0100")
+                                .form-group
+                                    label(for='lstRol') Producto al que pertenece *
+                                    select#lstRol.form-control
+                                        option Seleccione
+                                        option FEI2
+                                        option SmartReport
+                            .col-md-6.col-sm-12
+                                .form-group
+                                    label(for='txtCodigo') Selecionar etiqueta
+                                    input#txtCodigo.form-control(name="txtRUC", type="text",  placeholder="Ingrese la etiqueta" )
+                                    //- p.badge.badge-primary smart
+                                    //- p.badge.badge-primary fei2
+                                    //- button.btn.btn-danger Borrar etiquetas
+                                    //- p Estimado usuario la etiqueta que seleccionaste no existe, ¿Desea agregarla? 
+                                    //-     a(href="javascript: void(0);" id="triggerModalTag") Registrar nueva etiqueta
+                                .form-group
+                                    .text-center
+                                        label.custom-control.custom-checkbox
+                                            input.custom-control-input(type='checkbox')
+                                            span.custom-control-indicator
+                                            span.custom-control-description Marcar como respondido  
+                        .row
+                            .col-md-6.offset-md-3.col-sm-12.offset-sm-0
+                                .form-group
+                                    button.btn.btn-primary.btn-block(type='submit') Registrar
+br
+
+#modalTags.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLabel', aria-hidden='true')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                h5#modalLabel.modal-title Agregar etiqueta
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+            .modal-body
+                .form
+                    .form-group
+                        label.text-justify Las etiquetas o tags son palabras que agrupan artículos o ítems relacionados. Son palabras que los definen de forma más sencilla, además de proporcionar más facilidad en las búsquedas. 
+                            em  Recuerde escribir en minúsculas y no dejar espacios, o si prefiere separar palabras hágalo mediante guiones.
+                    .form-group
+                        label.col-form-label(for='txtAddTag') Etiqueta
+                        input#txtAddTag.form-control(type='text', placeholder="Escriba la etiqueta correspondiente")
+            .modal-footer
+                button.btn.btn-secondary(type='button', data-dismiss='modal') Cerrar
+                button.btn.btn-primary(type='button') Guardar etiqueta
+script.
+    $(function () {
+        $("#triggerModalTag").on("click", function() {
+            $('#modalTags').modal('show');
+        });
+    });

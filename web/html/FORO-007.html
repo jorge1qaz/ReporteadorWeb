@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <!--link(rel="stylesheet", href="../style/css/bootstrap/bootstrap-reboot.css")-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"/>
+  <!--script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')-->
+  <script src="../js/jquery-3.2.1.min.js" text="javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="../js/datatables/jquery.dataTables.min.js" text="javascript"></script>
+  <script src="../js/datatables/dataTables.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/dataTables.responsive.min.js" text="javascript"></script>
+  <script src="../js/datatables/responsive.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/autoFill.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/datatables/buttons.bootstrap4.min.js" text="javascript"></script>
+  <script src="../js/validaciones/jquery.validate.min.js" text="javascript"></script>
+  <script src="../js/validaciones/additional-methods.min.js" text="javascript"></script>
+  <link rel="stylesheet" href="../style/datatables/dataTables.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/buttons.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../fonts/google/material-icons.css"/>
+  <link rel="stylesheet" href="../style/datatables/autoFill.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/colReorder.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/fixedColumns.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/fixedHeader.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/keyTable.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/responsive.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/rowGroup.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/rowReorder.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/scroller.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/datatables/select.bootstrap4.min.css"/>
+  <link rel="stylesheet" href="../style/fonts/material-icons.css"/>
+  <title>Reportes</title><br/><br/>
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded bg-dark" id="navMaster" runat="server" style="margin-top: -50px;">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a href="https://contasis.net/"><img class="nav-link" src="../images/logo.png" alt=""/></a></li>
+        <li class="nav-item"><br/><a class="nav-link" href="javascript: void(0);">Crear ítem</a></li>
+        <li class="nav-item"><br/><a class="nav-link" href="javascript: void(0);">Buscar ítems</a></li>
+        <li class="nav-item"><br/><a class="nav-link" href="javascript: void(0);">Ítems sin respuesta </a></li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0">
+        <asp:label id="lblNombreUsuario" runat="server" style="margin-right: 15px;" text=""></asp:label><a class="btn btn-outline-info my-2 my-sm-0" href="~/Acceso.aspx" runat="server">Iniciar sesión</a>
+      </div>
+    </div>
+  </nav>
+  <body><br/>
+    <div class="container">
+      <div class="row">
+        <h2><span>El sistema no puede responder su solicitud.</span></h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-12">
+          <p class="font-weight-bold">Código <span>0100</span></p>
+        </div>
+        <div class="offset-md-5 col-md-3 col-sm-12">
+          <label class="custom-control custom-checkbox">
+            <input class="custom-control-input" type="checkbox"/><span class="custom-control-indicator"></span><span class="custom-control-description">Marcar como útil </span>
+          </label>
+        </div>
+      </div>
+      <div class="row text-justify">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, velit, quibusdam similique doloremque earum maxime officia molestias id ut, nostrum repellat sunt accusantium! Dolorem corrupti voluptates natus inventore voluptatibus assumenda?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti possimus nesciunt illo optio molestias dolorum provident, magnam recusandae, cumque, maxime quae. Modi, magnam. Repudiandae enim minima quos quas ipsum nulla.lorem</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, velit, quibusdam similique doloremque earum maxime officia molestias id ut, nostrum repellat sunt accusantium! Dolorem corrupti voluptates natus inventore voluptatibus assumenda?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti possimus nesciunt illo optio molestias dolorum provident, magnam recusandae, cumque, maxime quae. Modi, magnam. Repudiandae enim minima quos quas ipsum nulla.lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus velit at animi expedita id, vitae nemo, eum nesciunt sed unde deserunt laborum qui accusantium quod. Laudantium ratione fugiat impedit facilis!</p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <p>Ver quienes aportaron a esta respuesta <a id="btnTriggerContribuyentes" href="javascript: void(0);">Contribuyentes</a></p>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <p>Votos <span>2</span></p>
+        </div>
+        <div class="col-md-3 col-sm-12"><em>Realizado el 02 de Abril, 2018</em></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form" id="Formulario">
+            <div class="card card-secondary">
+              <div class="card-block">
+                <h5 class="text-center">¿Está de acuerdo con la respuesta? Haga un comentario.</h5>
+                <div class="form-group">
+                  <label for="txtTitulo">Escribir comentario</label>
+                  <textarea class="form-control" type="text" id="txtComentario" placeholder="Déjenos su opinión"></textarea>
+                </div>
+                <div class="float-right">
+                  <div class="form-group"><a href="javascript: void(0);">Debe iniciar sesión para hacer un comentario    </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><br/>
+      <div class="row">
+        <div class="offset-md-1">
+          <h3 class="text-justify font-weight-bold">Comentarios</h3>
+          <div class="row">
+            <table>
+              <tr>
+                <td class="text-justify font-weight-bold">Carlos Soto</td>
+              </tr>
+              <tr>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nisi magni modi quaerat, itaque facilis sequi eaque temporibus saepe accusantium illo nemo amet debitis, incidunt placeat, asperiores error ratione quos!</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="row">
+                    <div class="col-md-6"><em>Realizado el 01 de Abril, 2018</em></div>
+                    <div class="col-md-3">
+                      <p>Votos <span>0</span></p>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="custom-control custom-checkbox">
+                        <input class="custom-control-input" type="checkbox"/><span class="custom-control-indicator"></span><span class="custom-control-description">Marcar como útil  </span>
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="row">
+            <table>
+              <tr>
+                <td class="text-justify font-weight-bold">Juan Ferrer</td>
+              </tr>
+              <tr>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, voluptatibus praesentium maiores natus inventore velit enim nam repellat sint, voluptate quia perferendis assumenda. Voluptatem ut dolores a iusto eius sapiente?</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="row">
+                    <div class="col-md-6"><em>Realizado el 02 de Abril, 2018</em></div>
+                    <div class="col-md-3">
+                      <p>Votos <span>2</span></p>
+                    </div>
+                    <div class="col-md-3">
+                      <label class="custom-control custom-checkbox">
+                        <input class="custom-control-input" type="checkbox"/><span class="custom-control-indicator"></span><span class="custom-control-description">Marcar como útil </span>
+                      </label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div><br/>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modalContribuyentes" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Lista de contribuyentes</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <tr>
+                <td>Contribuyente</td>
+                <td>Fecha</td>
+              </tr>
+              <tr>
+                <td> <span>Viktor Krum </span></td>
+                <td><em>El 01 de Abril, 2018</em></td>
+              </tr>
+              <tr>
+                <td> <span>Susan Bones</span></td>
+                <td><em>El 02 de Abril, 2018</em></td>
+              </tr>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+          $("#btnTriggerContribuyentes").on("click", function() {
+              $('#modalContribuyentes').modal('show');
+          });
+      });
+    </script>
+  </body>
+  <script src="../js/pdf2/jspdf.min.js" text="javascript"></script>
+  <script src="../js/pdf2/html2pdf.js" text="javascript"></script>
+  <script src="../js/pdf/app.js" text="javascript"></script>
+</html>

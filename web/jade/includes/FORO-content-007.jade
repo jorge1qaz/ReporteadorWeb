@@ -1,0 +1,112 @@
+br
+.container
+    .row
+        h2
+            span El sistema no puede responder su solicitud.
+    .row
+        .col-md-4.col-sm-12
+            p.font-weight-bold Código 
+                span 0100
+        .offset-md-5.col-md-3.col-sm-12
+            label.custom-control.custom-checkbox
+                input.custom-control-input(type='checkbox')
+                span.custom-control-indicator
+                span.custom-control-description Marcar como útil 
+    .row.text-justify
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, velit, quibusdam similique doloremque earum maxime officia molestias id ut, nostrum repellat sunt accusantium! Dolorem corrupti voluptates natus inventore voluptatibus assumenda?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti possimus nesciunt illo optio molestias dolorum provident, magnam recusandae, cumque, maxime quae. Modi, magnam. Repudiandae enim minima quos quas ipsum nulla.lorem
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, velit, quibusdam similique doloremque earum maxime officia molestias id ut, nostrum repellat sunt accusantium! Dolorem corrupti voluptates natus inventore voluptatibus assumenda?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti possimus nesciunt illo optio molestias dolorum provident, magnam recusandae, cumque, maxime quae. Modi, magnam. Repudiandae enim minima quos quas ipsum nulla.lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus velit at animi expedita id, vitae nemo, eum nesciunt sed unde deserunt laborum qui accusantium quod. Laudantium ratione fugiat impedit facilis!
+    .row
+        .col-md-6.col-sm-12
+            p Ver quienes aportaron a esta respuesta 
+                a#btnTriggerContribuyentes(href="javascript: void(0);") Contribuyentes
+        .col-md-3.col-sm-12
+            p Votos 
+                span 2
+        .col-md-3.col-sm-12
+            em Realizado el 02 de Abril, 2018
+    .row
+        .col-md-12
+            .form#Formulario
+                .card.card-secondary
+                    .card-block
+                        h5.text-center ¿Está de acuerdo con la respuesta? Haga un comentario.
+                        .form-group
+                            label(for='txtTitulo') Escribir comentario
+                            textarea.form-control(type='text', id="txtComentario", placeholder='Déjenos su opinión')
+                        .float-right
+                            .form-group
+                                a(href="javascript: void(0);") Debe iniciar sesión para hacer un comentario    
+    br
+    .row
+        .offset-md-1
+            h3.text-justify.font-weight-bold Comentarios
+            .row
+                table
+                    tr
+                        td.text-justify.font-weight-bold Carlos Soto
+                    tr
+                        td Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nisi magni modi quaerat, itaque facilis sequi eaque temporibus saepe accusantium illo nemo amet debitis, incidunt placeat, asperiores error ratione quos!
+                    tr
+                        td
+                            .row
+                                .col-md-6
+                                    em Realizado el 01 de Abril, 2018
+                                .col-md-3
+                                    p Votos 
+                                        span 0
+                                .col-md-3
+                                    label.custom-control.custom-checkbox
+                                        input.custom-control-input(type='checkbox')
+                                        span.custom-control-indicator
+                                        span.custom-control-description Marcar como útil  
+            .row
+                table
+                    tr
+                        td.text-justify.font-weight-bold Juan Ferrer
+                    tr
+                        td Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, voluptatibus praesentium maiores natus inventore velit enim nam repellat sint, voluptate quia perferendis assumenda. Voluptatem ut dolores a iusto eius sapiente?
+                    tr
+                        td
+                            .row
+                                .col-md-6
+                                    em Realizado el 02 de Abril, 2018
+                                .col-md-3
+                                    p Votos 
+                                        span 2
+                                .col-md-3
+                                    label.custom-control.custom-checkbox
+                                        input.custom-control-input(type='checkbox')
+                                        span.custom-control-indicator
+                                        span.custom-control-description Marcar como útil 
+            br
+#modalContribuyentes.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLabel', aria-hidden='true')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                h5#modalLabel.modal-title Lista de contribuyentes
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+            .modal-body
+                table.table
+                    tr
+                        td Contribuyente
+                        td Fecha
+                    tr
+                        td 
+                            span Viktor Krum 
+                        td
+                            em El 01 de Abril, 2018
+                    tr
+                        td 
+                            span Susan Bones
+                        td
+                            em El 02 de Abril, 2018
+
+            .modal-footer
+                button.btn.btn-secondary(type='button', data-dismiss='modal') Cerrar
+script.
+    $(function () {
+        $("#btnTriggerContribuyentes").on("click", function() {
+            $('#modalContribuyentes').modal('show');
+        });
+    });

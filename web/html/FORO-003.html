@@ -42,11 +42,110 @@
         <li class="nav-item"><br/><a class="nav-link" href="javascript: void(0);">Ítems sin respuesta </a></li>
       </ul>
       <div class="form-inline my-2 my-lg-0">
-        <asp:label id="lblNombreUsuario" runat="server" style="margin-right: 15px;" text=""></asp:label><a class="btn btn-outline-info my-2 my-sm-0" href="~/Acceso.aspx" runat="server">Cerrar sesión</a>
+        <asp:label id="lblNombreUsuario" runat="server" style="margin-right: 15px;" text=""></asp:label><a class="btn btn-outline-info my-2 my-sm-0" href="~/Acceso.aspx" runat="server">Iniciar sesión</a>
       </div>
     </div>
   </nav>
-  <body></body>
+  <body><br/>
+    <div class="container">
+      <div class="row">
+        <div class="offset-md-1 offset-sm-0 col-md-10 col-sm-12">
+          <div class="form" id="Formulario">
+            <div class="card card-secondary">
+              <div class="card-block">
+                <h5 class="text-center">Creación de respuesta o edición para el ítem</h5>
+                <div class="text-center"><em>Los campos marcados con un asterisco (*) son obligatorios.</em></div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="txtTitulo">Título *</label>
+                      <input class="form-control" type="text" id="txtTitulo" placeholder="Ingrese el título" value="El sistema no puede responder su solicitud"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="txtDescripcion">Descripción</label>
+                      <textarea class="form-control" type="text" id="txtDescripcion" placeholder="Ingrese la descripción" rows="10"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="txtCodigo">Código</label>
+                      <input class="form-control" id="txtCodigo" name="txtRUC" placeholder="Código del ítem" value="0100"/>
+                    </div>
+                    <div class="form-group">
+                      <label for="lstRol">Producto al que pertenece *</label>
+                      <select class="form-control" id="lstRol">
+                        <option>Seleccione</option>
+                        <option>FEI2</option>
+                        <option>SmartReport</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="txtCodigo">Selecionar etiqueta</label>
+                      <input class="form-control" id="txtCodigo" name="txtRUC" type="text" placeholder="Ingrese la etiqueta"/>
+                    </div>
+                    <div class="form-group">
+                      <div class="text-center">
+                        <label class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox"/><span class="custom-control-indicator"></span><span class="custom-control-description">Marcar como respondido  </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 offset-md-3 col-sm-12 offset-sm-0">
+                    <div class="form-group">
+                      <button class="btn btn-primary btn-block" type="submit">Registrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><br/>
+    <div class="modal fade" id="modalTags" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Agregar etiqueta</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <div class="form">
+              <div class="form-group">
+                <label class="text-justify">Las etiquetas o tags son palabras que agrupan artículos o ítems relacionados. Son palabras que los definen de forma más sencilla, además de proporcionar más facilidad en las búsquedas. <em> Recuerde escribir en minúsculas y no dejar espacios, o si prefiere separar palabras hágalo mediante guiones.</em></label>
+              </div>
+              <div class="form-group">
+                <label class="col-form-label" for="txtAddTag">Etiqueta</label>
+                <input class="form-control" id="txtAddTag" type="text" placeholder="Escriba la etiqueta correspondiente"/>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cerrar</button>
+            <button class="btn btn-primary" type="button">Guardar etiqueta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+          $("#triggerModalTag").on("click", function() {
+              $('#modalTags').modal('show');
+          });
+      });
+    </script>
+  </body>
   <script src="../js/pdf2/jspdf.min.js" text="javascript"></script>
   <script src="../js/pdf2/html2pdf.js" text="javascript"></script>
   <script src="../js/pdf/app.js" text="javascript"></script>
