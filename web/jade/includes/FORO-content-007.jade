@@ -60,11 +60,11 @@ br
                                         span.custom-control-indicator
                                         span.custom-control-description Marcar como útil  
             .row
-                table
+                table(style="width: 100%;")
                     tr
                         td.text-justify.font-weight-bold Juan Ferrer
                     tr
-                        td Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, voluptatibus praesentium maiores natus inventore velit enim nam repellat sint, voluptate quia perferendis assumenda. Voluptatem ut dolores a iusto eius sapiente?
+                        td es a iusto eius sapiente?
                     tr
                         td
                             .row
@@ -79,6 +79,26 @@ br
                                         span.custom-control-indicator
                                         span.custom-control-description Marcar como útil 
             br
+            .row
+                span
+                    table(style="width: 100%;")
+                        tr
+                            td.text-justify.font-weight-bold
+                                span#MainContent_dtlComentarios_lblNombres_3 mvirtual mvirtual apellidos
+                        tr
+                            td
+                                span#MainContent_dtlComentarios_lblDescripcion_3 me gusto este nuevo post
+                        tr
+                            td
+                                .row
+                                    .col-md-6
+                                        em
+                                            | Realizado el 
+                                            span#MainContent_dtlComentarios_lblFechaCreacion_3 04/04/2018 16:40:57
+                                    .col-md-3
+                                        p
+                                            | Votos 
+                                            span#MainContent_dtlComentarios_lblVotos_3 0
 #modalContribuyentes.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalLabel', aria-hidden='true')
     .modal-dialog(role='document')
         .modal-content
